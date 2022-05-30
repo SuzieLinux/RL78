@@ -1,0 +1,41 @@
+#Generating source browse information for project LIN_DEV
+
+
+#Abbreviations
+cc = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.5\common\bin\SourceIndexer.exe
+ll = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.5\common\bin\PbdLink.exe
+bd = C$:\Program$ Files$ (x86)\IAR$ Systems\Embedded$ Workbench$ 8.5\common\bin\makeBrowseData.exe
+
+
+
+#Rules
+rule index
+  depfile = $out.dep
+  command = $cc -out=$out -f $in
+rule link
+  command = $ll -M $out $in
+rule browsedata
+  command = $bd $in -output  $out
+
+
+
+#Build steps
+build adc.pbi : index adc.xcl
+build cgc.pbi : index cgc.xcl
+build intp.pbi : index intp.xcl
+build lin.pbi : index lin.xcl
+build main.pbi : index main.xcl
+build port.pbi : index port.xcl
+build RtkSched.pbi : index RtkSched.xcl
+build RtkTasks.pbi : index RtkTasks.xcl
+build serial.pbi : index serial.xcl
+build systeminit.pbi : index systeminit.xcl
+build timers.pbi : index timers.xcl
+build LIN_DEV_part0.pbi : link adc.pbi cgc.pbi intp.pbi
+build LIN_DEV_part1.pbi : link lin.pbi main.pbi port.pbi
+build LIN_DEV_part2.pbi : link RtkSched.pbi RtkTasks.pbi serial.pbi
+build LIN_DEV_part3.pbi : link systeminit.pbi timers.pbi
+build LIN_DEV.pbd : link LIN_DEV_part0.pbi LIN_DEV_part1.pbi LIN_DEV_part2.pbi LIN_DEV_part3.pbi
+build LIN_DEV.pbw : browsedata LIN_DEV.pbd
+
+
