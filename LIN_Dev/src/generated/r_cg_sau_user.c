@@ -108,7 +108,7 @@ void SPI_Send(uint8_t *aData, uint32_t aLength)
     VFD_CS = 0;
     VFD_WR = 0;
 
-	R_CSI11_Send(aData, aLength);
+    R_CSI11_Send(aData, aLength);
     while(G_CSI11_SendingData);
 
     VFD_WR = 1;

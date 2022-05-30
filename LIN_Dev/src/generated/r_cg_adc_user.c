@@ -20,9 +20,8 @@ Includes
 // Measure results for each analog input
 TstADCData stADCData[2];
 uint8_t SampleNumber[2] = { 0,0 };
-uint8_t 1AcquiMade = 0;
-uint8_t ADC_Done = 0;
 uint8_t AcquiMade = 0;
+uint8_t ADC_Done = 0;
 
 /*****************************************************************************
  *      @brief   Treating analog acquisition
