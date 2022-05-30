@@ -21,6 +21,8 @@ C:\Users\miche\Documents\RL78\LIN_Dev\src\
 -I
 C:\Users\miche\Documents\RL78\LIN_Dev\src\vfd\
 -I
+C:\Users\miche\Documents\RL78\LIN_Dev\src\pfdl\
+-I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\rl78\lib
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\rl78\inc
@@ -36,6 +38,8 @@ C:\Users\miche\Documents\RL78\LIN_Dev\src\Rtk
 C:\Users\miche\Documents\RL78\LIN_Dev\src
 -I
 C:\Users\miche\Documents\RL78\LIN_Dev\src\vfd
+-I
+C:\Users\miche\Documents\RL78\LIN_Dev\src\pfdl
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

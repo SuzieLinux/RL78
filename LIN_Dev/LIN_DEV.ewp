@@ -383,6 +383,7 @@
                     <state>$PROJ_DIR$\src\Rtk</state>
                     <state>$PROJ_DIR$\src</state>
                     <state>$PROJ_DIR$\src\vfd</state>
+                    <state>$PROJ_DIR$\src\pfdl</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -530,7 +531,8 @@
                 </option>
                 <option>
                     <name>AsmDefines</name>
-                    <state>###Uninitialized###</state>
+                    <state>__NEAR_MODEL__</state>
+                    <state>__NEAR_DATA_MODEL__</state>
                 </option>
                 <option>
                     <name>AsmPreprocOutput</name>
@@ -710,6 +712,7 @@
                     <state>__RESERVE_OCD_ROM=1</state>
                     <state>__RESERVE_OCD_TRACE_RAM=0</state>
                     <state>__RESERVE_HOTPLUGIN_RAM=0</state>
+                    <state>__RESERVE_T04_FDL=1</state>
                 </option>
                 <option>
                     <name>IlinkMapFile</name>
@@ -737,11 +740,11 @@
                 </option>
                 <option>
                     <name>IlinkIcfOverride</name>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>IlinkIcfFile</name>
-                    <state>$TOOLKIT_DIR$\config\lnkrl78_s3.icf</state>
+                    <state>C:\Users\miche\Documents\RL78\LIN_Dev\linker_files\trio_lnkR5F105xA.icf</state>
                 </option>
                 <option>
                     <name>IlinkIcfFileSlave</name>
