@@ -313,4 +313,6 @@ void R_CSI11_Create(void);
 void R_CSI11_Start(void);
 void R_CSI11_Stop(void);
 MD_STATUS R_CSI11_Send(uint8_t * const tx_buf, uint16_t tx_num);
+void SPI_Send(uint8_t *aData, uint32_t aLength);
+
 #endif

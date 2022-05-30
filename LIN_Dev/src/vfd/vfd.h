@@ -9,6 +9,8 @@
 #ifndef __VFD_H__
 #define __VFD_H__
 
+#include "r_cg_macrodriver.h"
+
 #define VFD_CS   P2_bit.no3
 #define VFD_WR   P2_bit.no2
 #define VFD_Busy P3_bit.no3
