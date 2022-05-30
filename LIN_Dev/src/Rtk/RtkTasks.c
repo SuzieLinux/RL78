@@ -13,7 +13,7 @@
 #include "RtkTasks.h"
 #include "lin.h"
 #include <string.h>
-#include "port.h"
+#include "r_cg_port.h"
 
 /*---------------------------------------------------------------------------*/
 /* CONST                                                                     */

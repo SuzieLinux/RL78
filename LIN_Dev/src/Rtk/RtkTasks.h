@@ -14,7 +14,7 @@
 #include "r_cg_tau.h"
 #include "r_cg_userdefine.h"
 #include <string.h>
-#include "port.h"
+#include "r_cg_port.h"
 
 #define DucRtk_eTASKNBTASK  9
 #define DucRtk_eTASKNBRECUR 8
