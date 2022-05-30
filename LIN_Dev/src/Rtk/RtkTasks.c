@@ -6,9 +6,9 @@
  * @brief  Real Time Tasks
  *
 */
-#include "macrodriver.h"
-#include "userdefine.h"
-#include "timers.h"
+#include "r_cg_macrodriver.h"
+#include "r_cg_userdefine.h"
+#include "r_cg_tau.h"
 #include "RtkSched.h"
 #include "RtkTasks.h"
 #include "lin.h"

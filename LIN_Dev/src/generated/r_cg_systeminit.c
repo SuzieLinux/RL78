@@ -37,7 +37,7 @@ Includes
 #include "r_cg_sau.h"
 #include "r_cg_adc.h"
 #include "r_cg_intp.h"
-#include "r_cg_userdefine.h"
+#include "r_cg_r_cg_userdefine.h"
 
 /***********************************************************************************************************************
 Pragma directive

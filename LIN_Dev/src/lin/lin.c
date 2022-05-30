@@ -7,10 +7,10 @@
  *
 */
 
-#include "macrodriver.h"
-#include "serial.h"
-#include "userdefine.h"
-#include "timers.h"
+#include "r_cg_macrodriver.h"
+#include "r_cg_sau.h"
+#include "r_cg_userdefine.h"
+#include "r_cg_tau.h"
 #include "lin.h"
 #include "RtkTasks.h"
 #include <string.h>

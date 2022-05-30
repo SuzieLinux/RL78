@@ -7,9 +7,9 @@
  *
 */
 
-#include "macrodriver.h"
-#include "timers.h"
-#include "userdefine.h"
+#include "r_cg_macrodriver.h"
+#include "r_cg_tau.h"
+#include "r_cg_userdefine.h"
 #include "RtkTasks.h"
 #include "Rtksched.h"
 #include "lin.h"

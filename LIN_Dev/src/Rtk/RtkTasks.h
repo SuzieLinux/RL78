@@ -10,9 +10,9 @@
 #ifndef RTKTASKS_H
 #define RTKTASKS_H
 
-#include "macrodriver.h"
-#include "timers.h"
-#include "userdefine.h"
+#include "r_cg_macrodriver.h"
+#include "r_cg_tau.h"
+#include "r_cg_userdefine.h"
 #include <string.h>
 #include "port.h"
 

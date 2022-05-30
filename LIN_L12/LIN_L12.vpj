@@ -50,35 +50,35 @@
 		</Menu>
 	</Config>
 	<Files>
-		<F N="rl78/LIN_L12/src/LIN_L12.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_adc.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_adc.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_adc_user.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_cgc.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_cgc.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_cgc_user.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_intc.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_intc.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_intc_user.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_interrupt_handlers.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_it.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_it.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_it_user.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_lcd.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_lcd.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_lcd_user.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_macrodriver.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_serial.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_serial.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_serial_user.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_timer.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_timer.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_timer_user.c"/>
-		<F N="rl78/LIN_L12/src/r_cg_userdefine.h"/>
-		<F N="rl78/LIN_L12/src/r_cg_vector_table.c"/>
-		<F N="rl78/LIN_L12/src/r_hardware_setup.c"/>
-		<F N="rl78/LIN_L12/src/r_main.c"/>
-		<F N="rl78/LIN_L12/src/r_reset_program.asm"/>
+		<F N="src/LIN_L12.c"/>
+		<F N="src/r_cg_adc.c"/>
+		<F N="src/r_cg_adc.h"/>
+		<F N="src/r_cg_adc_user.c"/>
+		<F N="src/r_cg_cgc.c"/>
+		<F N="src/r_cg_cgc.h"/>
+		<F N="src/r_cg_cgc_user.c"/>
+		<F N="src/r_cg_intc.c"/>
+		<F N="src/r_cg_intc.h"/>
+		<F N="src/r_cg_intc_user.c"/>
+		<F N="src/r_cg_interrupt_handlers.h"/>
+		<F N="src/r_cg_it.c"/>
+		<F N="src/r_cg_it.h"/>
+		<F N="src/r_cg_it_user.c"/>
+		<F N="src/r_cg_lcd.c"/>
+		<F N="src/r_cg_lcd.h"/>
+		<F N="src/r_cg_lcd_user.c"/>
+		<F N="src/r_cg_macrodriver.h"/>
+		<F N="src/r_cg_serial.c"/>
+		<F N="src/r_cg_serial.h"/>
+		<F N="src/r_cg_serial_user.c"/>
+		<F N="src/r_cg_timer.c"/>
+		<F N="src/r_cg_timer.h"/>
+		<F N="src/r_cg_timer_user.c"/>
+		<F N="src/r_cg_userdefine.h"/>
+		<F N="src/r_cg_vector_table.c"/>
+		<F N="src/r_hardware_setup.c"/>
+		<F N="src/r_main.c"/>
+		<F N="src/r_reset_program.asm"/>
 	</Files>
 	<List Name="RTE">
 	</List>

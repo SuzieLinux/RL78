@@ -10,8 +10,8 @@
 #ifndef LIN_H
 #define LIN_H
 
-#include "macrodriver.h"
-#include "userdefine.h"
+#include "r_cg_macrodriver.h"
+#include "r_cg_userdefine.h"
 
 #define RightAir_LIN_ID  0xD8
 #define LeftAir_LIN_ID   0x99
