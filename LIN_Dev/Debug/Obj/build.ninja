@@ -20,22 +20,31 @@ rule browsedata
 
 
 #Build steps
-build adc.pbi : index adc.xcl
-build cgc.pbi : index cgc.xcl
-build intp.pbi : index intp.xcl
 build lin.pbi : index lin.xcl
 build main.pbi : index main.xcl
-build port.pbi : index port.xcl
+build r_cg_adc.pbi : index r_cg_adc.xcl
+build r_cg_adc_user.pbi : index r_cg_adc_user.xcl
+build r_cg_cgc.pbi : index r_cg_cgc.xcl
+build r_cg_cgc_user.pbi : index r_cg_cgc_user.xcl
+build r_cg_intp.pbi : index r_cg_intp.xcl
+build r_cg_intp_user.pbi : index r_cg_intp_user.xcl
+build r_cg_pfdl.pbi : index r_cg_pfdl.xcl
+build r_cg_port.pbi : index r_cg_port.xcl
+build r_cg_port_user.pbi : index r_cg_port_user.xcl
+build r_cg_sau.pbi : index r_cg_sau.xcl
+build r_cg_sau_user.pbi : index r_cg_sau_user.xcl
+build r_cg_systeminit.pbi : index r_cg_systeminit.xcl
+build r_cg_tau.pbi : index r_cg_tau.xcl
+build r_cg_tau_user.pbi : index r_cg_tau_user.xcl
 build RtkSched.pbi : index RtkSched.xcl
 build RtkTasks.pbi : index RtkTasks.xcl
-build serial.pbi : index serial.xcl
-build systeminit.pbi : index systeminit.xcl
-build timers.pbi : index timers.xcl
-build LIN_DEV_part0.pbi : link adc.pbi cgc.pbi intp.pbi
-build LIN_DEV_part1.pbi : link lin.pbi main.pbi port.pbi
-build LIN_DEV_part2.pbi : link RtkSched.pbi RtkTasks.pbi serial.pbi
-build LIN_DEV_part3.pbi : link systeminit.pbi timers.pbi
-build LIN_DEV.pbd : link LIN_DEV_part0.pbi LIN_DEV_part1.pbi LIN_DEV_part2.pbi LIN_DEV_part3.pbi
+build vfd.pbi : index vfd.xcl
+build LIN_DEV_part0.pbi : link lin.pbi main.pbi r_cg_adc.pbi r_cg_adc_user.pbi
+build LIN_DEV_part1.pbi : link r_cg_cgc.pbi r_cg_cgc_user.pbi r_cg_intp.pbi r_cg_intp_user.pbi
+build LIN_DEV_part2.pbi : link r_cg_pfdl.pbi r_cg_port.pbi r_cg_port_user.pbi r_cg_sau.pbi
+build LIN_DEV_part3.pbi : link r_cg_sau_user.pbi r_cg_systeminit.pbi r_cg_tau.pbi r_cg_tau_user.pbi
+build LIN_DEV_part4.pbi : link RtkSched.pbi RtkTasks.pbi vfd.pbi
+build LIN_DEV.pbd : link LIN_DEV_part0.pbi LIN_DEV_part1.pbi LIN_DEV_part2.pbi LIN_DEV_part3.pbi LIN_DEV_part4.pbi
 build LIN_DEV.pbw : browsedata LIN_DEV.pbd
 
 

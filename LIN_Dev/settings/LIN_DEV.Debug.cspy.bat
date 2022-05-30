@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\common\bin\cspybat" -f "D:\LIN_Dev\settings\LIN_DEV.Debug.general.xcl" --backend -f "D:\LIN_Dev\settings\LIN_DEV.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\common\bin\cspybat" -f "C:\Users\miche\Documents\RL78\LIN_Dev\settings\LIN_DEV.Debug.general.xcl" --backend -f "C:\Users\miche\Documents\RL78\LIN_Dev\settings\LIN_DEV.Debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\common\bin\cspybat" -f "D:\LIN_Dev\settings\LIN_DEV.Debug.general.xcl" "--debug_file=%~1" --backend -f "D:\LIN_Dev\settings\LIN_DEV.Debug.driver.xcl" 
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.5\common\bin\cspybat" -f "C:\Users\miche\Documents\RL78\LIN_Dev\settings\LIN_DEV.Debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\miche\Documents\RL78\LIN_Dev\settings\LIN_DEV.Debug.driver.xcl" 
 
 @echo off 
 :end

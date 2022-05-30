@@ -378,11 +378,11 @@
                 </option>
                 <option>
                     <name>CCIncludePath2</name>
-                    <state>$PROJ_DIR$\src\Base</state>
+                    <state>$PROJ_DIR$\src\generated</state>
                     <state>$PROJ_DIR$\src\lin</state>
                     <state>$PROJ_DIR$\src\Rtk</state>
-                    <state>$PROJ_DIR$\src\serial</state>
-                    <state>$PROJ_DIR$\src\Timers</state>
+                    <state>$PROJ_DIR$\src</state>
+                    <state>$PROJ_DIR$\src\vfd</state>
                 </option>
                 <option>
                     <name>CCStdIncCheck</name>
@@ -2078,22 +2078,52 @@
         </settings>
     </configuration>
     <file>
-        <name>$PROJ_DIR$\src\Base\adc.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\src\Base\cgc.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\src\Base\intp.c</name>
-    </file>
-    <file>
         <name>$PROJ_DIR$\src\lin\lin.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\src\Base\main.c</name>
+        <name>$PROJ_DIR$\src\main.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\src\Base\port.c</name>
+        <name>$PROJ_DIR$\src\generated\r_cg_adc.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_adc_user.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_cgc.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_cgc_user.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_intp.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_intp_user.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_pfdl.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_port.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_port_user.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_sau.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_sau_user.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_systeminit.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_tau.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\generated\r_cg_tau_user.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\src\Rtk\RtkSched.c</name>
@@ -2102,12 +2132,6 @@
         <name>$PROJ_DIR$\src\Rtk\RtkTasks.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\src\serial\serial.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\src\Base\systeminit.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\src\Timers\timers.c</name>
+        <name>$PROJ_DIR$\src\vfd\vfd.c</name>
     </file>
 </project>
