@@ -25,7 +25,6 @@ Global variables and functions
 ***********************************************************************************************************************/
 /* For TAU0_ch3 pulse measurement */
 uint32_t g_tau0_ch3_width = 0UL;
-extern uint8_t volatile break_received;
 
 /***********************************************************************************************************************
 * Function Name: R_TAU0_Create

@@ -16,8 +16,10 @@ Includes
 ***********************************************************************************************************************/
 #include "r_cg_macrodriver.h"
 #include "r_cg_tau.h"
+#include "r_cg_sau.h"
 #include "r_cg_userdefine.h"
 #include "lin.h"
+#include "vfd.h"
 
 /***********************************************************************************************************************
 Global variables and functions
@@ -35,7 +37,7 @@ uint16_t time_in_msecs = 0;
 #pragma vector = INTTM01_vect
 __interrupt static void r_tau0_channel1_interrupt(void)
 {
-	time_in_msecs++
+	time_in_msecs++;
 }
 /***********************************************************************************************************************
 * Function Name: r_tau0_channel3_interrupt
