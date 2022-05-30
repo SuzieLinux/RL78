@@ -22,6 +22,7 @@ TstADCData stADCData[2];
 uint8_t SampleNumber[2] = { 0,0 };
 uint8_t 1AcquiMade = 0;
 uint8_t ADC_Done = 0;
+uint8_t AcquiMade = 0;
 
 /*****************************************************************************
  *      @brief   Treating analog acquisition
@@ -96,7 +97,7 @@ __interrupt static void r_adc_interrupt(void)
                            stADCData[CurrentADC].uiSample[2] +
                            stADCData[CurrentADC].uiSample[3];
          ulValConversion >>= 2; /* Divide by 4 */
-         stDIAna_eMeasure[CurrentADC].uiValueRead = (uint16_t) ulValConversion;
+         stADCData[CurrentADC].uiValueRead = (uint16_t) ulValConversion;
 
          if (CurrentADC == 1)
          {
