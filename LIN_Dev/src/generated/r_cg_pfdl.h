@@ -40,8 +40,8 @@ Typedef definitions
 Global functions
 ***********************************************************************************************************************/
 void R_FDL_Create(void);
-pfdl_status_t R_FDL_Write(pfdl_u16 index, __near pfdl_u08* buffer, pfdl_u16 bytecount);
-pfdl_status_t R_FDL_Read(pfdl_u16 index, __near pfdl_u08* buffer, pfdl_u16 bytecount);
+pfdl_status_t R_FDL_Write(pfdl_u16 index,pfdl_u08* buffer, pfdl_u16 bytecount);
+pfdl_status_t R_FDL_Read(pfdl_u16 index,pfdl_u08* buffer, pfdl_u16 bytecount);
 pfdl_status_t R_FDL_Erase(pfdl_u16 blockno);
 void R_FDL_Open(void);
 void R_FDL_Close(void);

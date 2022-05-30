@@ -9,6 +9,7 @@
 
 #include <stdio.h>
 #include "vfd.h"
+#include "r_cg_sau.h"
 
 /*****************************************************************************
 *      @brief Change the cursor blink rate in 30 msecs increment

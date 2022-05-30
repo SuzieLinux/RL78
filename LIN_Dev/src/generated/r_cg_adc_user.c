@@ -15,7 +15,7 @@ Includes
 **********************************************************************************/
 #include "r_cg_macrodriver.h"
 #include "r_cg_adc.h"
-#include "r_cg_r_cg_userdefine.h"
+#include "r_cg_userdefine.h"
 
 // Measure results for each analog input
 TstADCData stADCData[2];

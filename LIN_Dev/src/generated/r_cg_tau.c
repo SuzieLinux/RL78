@@ -16,7 +16,7 @@ Includes
 ***********************************************************************************************************************/
 #include "r_cg_macrodriver.h"
 #include "r_cg_tau.h"
-#include "r_cg_r_cg_userdefine.h"
+#include "r_cg_userdefine.h"
 #include "lin.h"
 #include "Rtksched.h"
 

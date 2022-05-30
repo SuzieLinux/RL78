@@ -33,7 +33,7 @@ Includes
 #include "r_cg_port.h"
 /* Start user code for include. Do not edit comment generated here */
 /* End user code. Do not edit comment generated here */
-#include "r_cg_r_cg_userdefine.h"
+#include "r_cg_userdefine.h"
 
 /***********************************************************************************************************************
 Pragma directive
