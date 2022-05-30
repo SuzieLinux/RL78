@@ -25,6 +25,7 @@ Global variables and functions
 ***********************************************************************************************************************/
 volatile uint8_t break_received;
 volatile uint8_t sync_field_received;
+volatile uint8_t G_CSI11_SendingData = 0;
 
 /*****************************************************************************
 *      @brief Lin Interrupt
@@ -100,11 +101,13 @@ __interrupt static void r_csi11_interrupt(void)
             gp_csi11_tx_address++;
             g_csi11_tx_count--;
         }
+        else G_CSI11_SendingData = 0;
     }
 }
 
 void SPI_Send(uint8_t *aData, uint32_t aLength)
 {
+    G_CSI11_SendingData = 1;
     VFD_CS = 0;
     VFD_WR = 0;
 
