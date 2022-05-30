@@ -70,8 +70,8 @@ void VFD_SetLuminance(uint8_t luminance)
 ******************************************************************************/
 void VFD_ClearScreen(void)
 {
-	SPI_Send(&VFD_CLR,1);
-    VFD_wr_byte(VFD_CLR);
+	uint8_t c = VFD_CLR;
+	SPI_Send(&c,1);
 }
 
 /*****************************************************************************

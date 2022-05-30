@@ -18,6 +18,7 @@ Includes
 #include "r_cg_sau.h"
 #include "r_cg_userdefine.h"
 #include "vfd.h"
+#include "lin.h"
 
 /***********************************************************************************************************************
 Global variables and functions
