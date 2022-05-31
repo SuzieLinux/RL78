@@ -38338,13 +38338,27 @@
     "scope": null
   },
   {
+    "ID": "c:@G_CSI11_SendingData",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "G_CSI11_SendingData",
+    "location": {
+      "column": "18",
+      "line": "28",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_sau_user.c"
+    },
+    "name": "G_CSI11_SendingData",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:r_cg_sau_user.c@F@r_uart0_interrupt_receive",
     "What": "Function",
     "defdec": "Def",
     "display": "void r_uart0_interrupt_receive(void)",
     "location": {
       "column": "25",
-      "line": "37",
+      "line": "38",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_sau_user.c"
     },
     "name": "r_uart0_interrupt_receive",
@@ -38352,13 +38366,13 @@
     "scope": null
   },
   {
-    "ID": "c:r_cg_sau_user.c@1616@F@r_uart0_interrupt_receive@rx_data",
+    "ID": "c:r_cg_sau_user.c@1659@F@r_uart0_interrupt_receive@rx_data",
     "What": "Variable",
     "defdec": "Def",
     "display": "rx_data",
     "location": {
       "column": "22",
-      "line": "39",
+      "line": "40",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_sau_user.c"
     },
     "name": "rx_data",
@@ -38372,7 +38386,7 @@
     "display": "void r_csi11_interrupt(void)",
     "location": {
       "column": "25",
-      "line": "88",
+      "line": "89",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_sau_user.c"
     },
     "name": "r_csi11_interrupt",
@@ -38380,13 +38394,13 @@
     "scope": null
   },
   {
-    "ID": "c:r_cg_sau_user.c@3297@F@r_csi11_interrupt@err_type",
+    "ID": "c:r_cg_sau_user.c@3340@F@r_csi11_interrupt@err_type",
     "What": "Variable",
     "defdec": "Def",
     "display": "err_type",
     "location": {
       "column": "22",
-      "line": "90",
+      "line": "91",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_sau_user.c"
     },
     "name": "err_type",
@@ -38400,7 +38414,7 @@
     "display": "void SPI_Send(uint8_t *, uint32_t)",
     "location": {
       "column": "6",
-      "line": "106",
+      "line": "108",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_sau_user.c"
     },
     "name": "SPI_Send",
@@ -38408,128 +38422,72 @@
     "scope": null
   },
   {
-    "ID": "c:@g_tau0_ch3_width",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "g_tau0_ch3_width",
-    "location": {
-      "column": "10",
-      "line": "27",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
-    },
-    "name": "g_tau0_ch3_width",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@break_received",
-    "What": "Variable",
+    "ID": "c:@F@__low_level_init",
+    "What": "Function",
     "defdec": "Dec",
-    "display": "break_received",
+    "display": "int __low_level_init(void)",
     "location": {
-      "column": "25",
-      "line": "28",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+      "column": "5",
+      "line": "55",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
     },
-    "name": "break_received",
+    "name": "__low_level_init",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@R_TAU0_Create",
+    "ID": "c:@F@R_Systeminit",
     "What": "Function",
-    "defdec": "Def",
-    "display": "void R_TAU0_Create(void)",
+    "defdec": "Dec",
+    "display": "void R_Systeminit(void)",
     "location": {
       "column": "6",
-      "line": "36",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+      "line": "57",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
     },
-    "name": "R_TAU0_Create",
+    "name": "R_Systeminit",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@R_TAU0_Channel0_Start",
+    "ID": "c:@F@R_Systeminit",
     "What": "Function",
     "defdec": "Def",
-    "display": "void R_TAU0_Channel0_Start(void)",
+    "display": "void R_Systeminit(void)",
     "location": {
       "column": "6",
-      "line": "98",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+      "line": "65",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
     },
-    "name": "R_TAU0_Channel0_Start",
+    "name": "R_Systeminit",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@R_TAU0_Channel0_Stop",
-    "What": "Function",
+    "ID": "c:r_cg_systeminit.c@3887@F@R_Systeminit@w_count",
+    "What": "Variable",
     "defdec": "Def",
-    "display": "void R_TAU0_Channel0_Stop(void)",
+    "display": "w_count",
     "location": {
-      "column": "6",
-      "line": "110",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+      "column": "23",
+      "line": "67",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
     },
-    "name": "R_TAU0_Channel0_Stop",
+    "name": "w_count",
     "origin": "project_file",
     "scope": null
   },
   {
-    "ID": "c:@F@R_TAU0_Channel1_Start",
+    "ID": "c:@F@__low_level_init",
     "What": "Function",
     "defdec": "Def",
-    "display": "void R_TAU0_Channel1_Start(void)",
+    "display": "int __low_level_init(void)",
     "location": {
-      "column": "6",
-      "line": "122",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+      "column": "5",
+      "line": "97",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
     },
-    "name": "R_TAU0_Channel1_Start",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@R_TAU0_Channel1_Stop",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void R_TAU0_Channel1_Stop(void)",
-    "location": {
-      "column": "6",
-      "line": "134",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
-    },
-    "name": "R_TAU0_Channel1_Stop",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@R_TAU0_Channel3_Start",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void R_TAU0_Channel3_Start(void)",
-    "location": {
-      "column": "6",
-      "line": "146",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
-    },
-    "name": "R_TAU0_Channel3_Start",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@R_TAU0_Channel3_Stop",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void R_TAU0_Channel3_Stop(void)",
-    "location": {
-      "column": "6",
-      "line": "158",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
-    },
-    "name": "R_TAU0_Channel3_Stop",
+    "name": "__low_level_init",
     "origin": "project_file",
     "scope": null
   },
@@ -39010,83 +38968,13 @@
     "scope": null
   },
   {
-    "ID": "c:@F@__low_level_init",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "int __low_level_init(void)",
-    "location": {
-      "column": "5",
-      "line": "55",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
-    },
-    "name": "__low_level_init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@R_Systeminit",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void R_Systeminit(void)",
-    "location": {
-      "column": "6",
-      "line": "57",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
-    },
-    "name": "R_Systeminit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@R_Systeminit",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void R_Systeminit(void)",
-    "location": {
-      "column": "6",
-      "line": "65",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
-    },
-    "name": "R_Systeminit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:r_cg_systeminit.c@3887@F@R_Systeminit@w_count",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "w_count",
-    "location": {
-      "column": "23",
-      "line": "67",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
-    },
-    "name": "w_count",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@__low_level_init",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "int __low_level_init(void)",
-    "location": {
-      "column": "5",
-      "line": "97",
-      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_systeminit.c"
-    },
-    "name": "__low_level_init",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
     "ID": "c:@g_tau0_ch3_width",
     "What": "Variable",
     "defdec": "Def",
     "display": "g_tau0_ch3_width",
     "location": {
       "column": "10",
-      "line": "26",
+      "line": "28",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau_user.c"
     },
     "name": "g_tau0_ch3_width",
@@ -39100,7 +38988,7 @@
     "display": "time_in_msecs",
     "location": {
       "column": "10",
-      "line": "27",
+      "line": "29",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau_user.c"
     },
     "name": "time_in_msecs",
@@ -39114,7 +39002,7 @@
     "display": "void r_tau0_channel1_interrupt(void)",
     "location": {
       "column": "25",
-      "line": "36",
+      "line": "38",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau_user.c"
     },
     "name": "r_tau0_channel1_interrupt",
@@ -39128,7 +39016,7 @@
     "display": "void r_tau0_channel3_interrupt(void)",
     "location": {
       "column": "25",
-      "line": "47",
+      "line": "49",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau_user.c"
     },
     "name": "r_tau0_channel3_interrupt",
@@ -39142,7 +39030,7 @@
     "display": "void delay(uint16_t)",
     "location": {
       "column": "6",
-      "line": "83",
+      "line": "85",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau_user.c"
     },
     "name": "delay",
@@ -39156,7 +39044,7 @@
     "display": "int WaitIfBusy(void)",
     "location": {
       "column": "5",
-      "line": "98",
+      "line": "100",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau_user.c"
     },
     "name": "WaitIfBusy",
@@ -39170,10 +39058,108 @@
     "display": "void delay_ms(int)",
     "location": {
       "column": "6",
-      "line": "115",
+      "line": "117",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau_user.c"
     },
     "name": "delay_ms",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@R_TAU0_Create",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void R_TAU0_Create(void)",
+    "location": {
+      "column": "6",
+      "line": "29",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+    },
+    "name": "R_TAU0_Create",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@R_TAU0_Channel0_Start",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void R_TAU0_Channel0_Start(void)",
+    "location": {
+      "column": "6",
+      "line": "91",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+    },
+    "name": "R_TAU0_Channel0_Start",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@R_TAU0_Channel0_Stop",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void R_TAU0_Channel0_Stop(void)",
+    "location": {
+      "column": "6",
+      "line": "103",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+    },
+    "name": "R_TAU0_Channel0_Stop",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@R_TAU0_Channel1_Start",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void R_TAU0_Channel1_Start(void)",
+    "location": {
+      "column": "6",
+      "line": "115",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+    },
+    "name": "R_TAU0_Channel1_Start",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@R_TAU0_Channel1_Stop",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void R_TAU0_Channel1_Stop(void)",
+    "location": {
+      "column": "6",
+      "line": "127",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+    },
+    "name": "R_TAU0_Channel1_Stop",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@R_TAU0_Channel3_Start",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void R_TAU0_Channel3_Start(void)",
+    "location": {
+      "column": "6",
+      "line": "139",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+    },
+    "name": "R_TAU0_Channel3_Start",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@R_TAU0_Channel3_Stop",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void R_TAU0_Channel3_Stop(void)",
+    "location": {
+      "column": "6",
+      "line": "151",
+      "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
+    },
+    "name": "R_TAU0_Channel3_Stop",
     "origin": "project_file",
     "scope": null
   },

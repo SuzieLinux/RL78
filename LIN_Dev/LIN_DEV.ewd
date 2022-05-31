@@ -48,7 +48,7 @@
                 </option>
                 <option>
                     <name>DynDriver</name>
-                    <state>E2RL78</state>
+                    <state>EZCRL78</state>
                 </option>
                 <option>
                     <name>DebugDDFOverride</name>
