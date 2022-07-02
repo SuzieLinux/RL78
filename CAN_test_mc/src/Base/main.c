@@ -47,13 +47,13 @@ __root const uint8_t secuid[10] =
 ******************************************************************************/
 void main(void)
 {
-    vRtk_eInitScheduler();
+    InitScheduler();
     DRV_CANFDSPI_CS = 1;
     R_CSI00_Start();
     vPCAN_eInit();
 
     EI();
-    vRtk_eScheduler_Tsk();
+    Scheduler();
 }
 
 
