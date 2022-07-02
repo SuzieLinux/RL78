@@ -1,9 +1,8 @@
 /**
  * @file   r_cg_port.c
  * @author Michel Catudal
- * @date   23 June 2022
- * @version 0.1
- * @brief  pfdl driver
+ * @date   2 July 2022
+ * @brief  Port driver
  *
 */
 
@@ -29,12 +28,13 @@ Global variables and functions
 ***********************************************************************************************************************/
 void R_PORT_Create(void)
 {
-    P6 = _00_Pn2_OUTPUT_0;
-    PMC0 = _00_PMCn0_DI_ON | _00_PMCn1_DI_ON | _FC_PMC0_DEFAULT;
-    PMC1 = _04_PMCn2_NOT_USE | _08_PMCn3_NOT_USE | _00_PMCn6_DI_ON | _80_PMCn7_NOT_USE;
-    PM0 = _01_PMn0_MODE_INPUT | _02_PMn1_MODE_INPUT | _FC_PM0_DEFAULT;
+    P14 = _80_Pn7_OUTPUT_1;
+    PMC1 = _04_PMCn2_NOT_USE | _08_PMCn3_NOT_USE | _40_PMCn6_NOT_USE | _00_PMCn7_DI_ON;
+    PMC14 = _00_PMCn7_DI_ON | _7F_PMC14_DEFAULT;
+    ADPC = _02_ADPC_DI_ON;
     PM1 = _01_PMn0_NOT_USE | _02_PMn1_NOT_USE | _04_PMn2_NOT_USE | _08_PMn3_NOT_USE | _10_PMn4_NOT_USE |
-          _20_PMn5_NOT_USE | _40_PMn6_MODE_INPUT | _80_PMn7_NOT_USE;
-    PM6 = _01_PMn0_NOT_USE | _02_PMn1_NOT_USE | _00_PMn2_MODE_OUTPUT | _F8_PM6_DEFAULT;
+          _20_PMn5_NOT_USE | _40_PMn6_NOT_USE | _80_PMn7_MODE_INPUT;
+    PM2 = _01_PMn0_NOT_USE | _02_PMn1_MODE_INPUT | _04_PMn2_MODE_INPUT | _08_PMn3_NOT_USE | _F0_PM2_DEFAULT;
+    PM14 = _00_PMn7_MODE_OUTPUT | _7F_PM14_DEFAULT;
 }
 

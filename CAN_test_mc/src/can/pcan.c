@@ -1,9 +1,8 @@
 /**
  * @file   pcan.c
  * @author Michel Catudal
- * @date   26 June 2022
- * @version 0.1
- * @brief  CAN interface for bootloader
+ * @date   2 July 2022
+ * @brief  CAN interface
  *
 */
 #include "system.h"

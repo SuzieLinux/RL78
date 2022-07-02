@@ -1,8 +1,7 @@
 /**
  * @file   dcan.c
  * @author Michel Catudal
- * @date   16 June 2022
- * @version 0.1
+ * @date   2 July 2022
  * @brief  CAN interface
  *
 */
@@ -244,7 +243,7 @@ static int8_t iDCAN_iSetFilterAndMask(CAN_FIFO_CHANNEL FIFO, CAN_FILTER Filter)
 
     // Setup RX Filter
     fObj.word = 0;
-    fObj.bF.SID = DuiPCAN_eRX_DiagnosticPacketID;
+    fObj.bF.SID = 0x743;
 
     spiTransferError = iDCAN_iFilterObjectConfigure(Filter, &fObj.bF);
     if (spiTransferError != SPI_OK) return spiTransferError;

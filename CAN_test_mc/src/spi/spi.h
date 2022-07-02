@@ -35,11 +35,9 @@ int16_t SPI_ReadByteArray(uint16_t address, uint8_t *rxd, uint16_t nBytes);
 int16_t SPI_WriteByteArray(uint16_t address, uint8_t *txd, uint16_t nBytes);
 int16_t SPI_ReadWordArray(uint16_t address, uint32_t *rxd, uint16_t nWords);
 int16_t SPI_WriteWordArray(uint16_t address, uint32_t *txd, uint16_t nWords);
-void R_SAU0_Create(void);
+void R_SAU1_Create(void);
 void R_CSI11_Start(void);
 void R_CSI11_Stop(void);
-
-extern uint8_t g_csi11_data_received;
 
 /* Setting for 32.0MHz no wait */
 #define Time_1US        (4)  /* loop Number of   1us    */ /** SET **/
@@ -69,8 +67,8 @@ extern uint8_t g_csi11_data_received;
 /* Access time */
 #define SPI_T_SIO_WAIT  ((uint16_t)Time_1US)   /* SIO transmission&reception completion waiting polling time  */
 
-#define SIO_RXNEXT IF0H_bit.no5    /* CSI Receive completion  */
-#define SIO_TXEND  IF0H_bit.no5    /* CSI Transmit completion */
+#define SIO_RXNEXT IF0H_bit.no0    /* CSI Receive completion  */
+#define SIO_TXEND  IF0H_bit.no0    /* CSI Transmit completion */
 
 /*--------------- Definitions of flag ----------------*/
 #define SIO_TRUE  ((uint8_t)(0x01))       /* Flag "ON"   */

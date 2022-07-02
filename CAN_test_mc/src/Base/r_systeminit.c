@@ -23,7 +23,7 @@
 * Device(s)    : R5F104BG
 * Tool-Chain   : IAR Systems iccrl78
 * Description  : This file implements system initializing function.
-* Creation Date: 6/27/2022
+* Creation Date: 7/2/2022
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -59,7 +59,7 @@ void R_Systeminit(void)
     R_CGC_Get_ResetSource();
     R_CGC_Create();
     R_PORT_Create();
-    R_SAU0_Create();
+    R_SAU1_Create();
     R_IT_Create();
     IAWCTL = 0x00U;
 }

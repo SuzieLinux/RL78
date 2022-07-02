@@ -1,8 +1,8 @@
 /**
  * @file   dcan.h
  * @author Michel Catudal
- * @date   15 June 2022
- * @version 0.1
+ * @date   2 July 2022
+ * @brief  CAN interface
  * @brief  CAN driver for bootloader
  *
 */
@@ -12,12 +12,10 @@
 #include "system.h"
 
 #define SPI_DEFAULT_BUFFER_LENGTH 96
-#define DuiDCAN_eTX_DiagnosticPacketID  0x763
-#define DuiPCAN_eRX_DiagnosticPacketID  0x743
-#define DRV_CANFDSPI_CS P6_bit.no2
-#define DRV_CANFDSPI_INT P13_bit.no7
-#define DRV_CANFDSPI_INT0 P0_bit.no1
-#define DRV_CANFDSPI_INT1 P0_bit.no0
+#define DRV_CANFDSPI_CS P14_bit.no7
+#define DRV_CANFDSPI_INT P2_bit.no2
+#define DRV_CANFDSPI_INT0 P2_bit.no1
+#define DRV_CANFDSPI_INT1 P1_bit.no7
 
 // Device selection
 #define MCP2518FD 0

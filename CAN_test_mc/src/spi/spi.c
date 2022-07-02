@@ -18,81 +18,83 @@ uint8_t spiTransmitBuffer[SPI_DEFAULT_BUFFER_LENGTH];
 
 //! SPI Receive buffer
 uint8_t spiReceiveBuffer[SPI_DEFAULT_BUFFER_LENGTH];
+static void R_CSI20_Create(void);
 
 /***********************************************************************************************************************
-* Function Name: R_SAU0_Create
-* Description  : This function initializes the SAU0 module.
+* Function Name: R_SAU1_Create
+* Description  : This function initializes the SAU1 module.
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
-void R_SAU0_Create(void)
+void R_SAU1_Create(void)
 {
-    SAU0EN = 1U;    /* supply SAU0 clock */
+    SAU1EN = 1U;    /* supply SAU1 clock */
     NOP();
     NOP();
     NOP();
     NOP();
-    SPS0 = _0000_SAU_CK00_FCLK_0 | _0000_SAU_CK01_FCLK_0;
-    R_CSI00_Create();
+    SPS1 = _0000_SAU_CK00_FCLK_0 | _0000_SAU_CK01_FCLK_0;
+    R_CSI20_Create();
 }
 
 /***********************************************************************************************************************
-* Function Name: R_CSI00_Create
-* Description  : This function initializes the CSI00 module.
+* Function Name: R_CSI20_Create
+* Description  : This function initializes the CSI20 module.
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
-void R_CSI00_Create(void)
+static void R_CSI20_Create(void)
 {
-    ST0 |= _0001_SAU_CH0_STOP_TRG_ON;    /* disable CSI00 */
-    CSIMK00 = 1U;    /* disable INTCSI00 interrupt */
-    CSIIF00 = 0U;    /* clear INTCSI00 interrupt flag */
-    /* Set INTCSI00 low priority */
-    CSIPR100 = 1U;
-    CSIPR000 = 1U;
-    SIR00 = _0002_SAU_SIRMN_PECTMN | _0001_SAU_SIRMN_OVCTMN;    /* clear error flag */
-    SMR00 = _0020_SAU_SMRMN_INITIALVALUE | _0000_SAU_CLOCK_SELECT_CK00 | _0000_SAU_CLOCK_MODE_CKS |
+    ST1 |= _0001_SAU_CH0_STOP_TRG_ON;    /* disable CSI20 */
+    CSIMK20 = 1U;    /* disable INTCSI20 interrupt */
+    CSIIF20 = 0U;    /* clear INTCSI20 interrupt flag */
+    /* Set INTCSI20 low priority */
+    CSIPR120 = 1U;
+    CSIPR020 = 1U;
+    SIR10 = _0002_SAU_SIRMN_PECTMN | _0001_SAU_SIRMN_OVCTMN;    /* clear error flag */
+    SMR10 = _0020_SAU_SMRMN_INITIALVALUE | _0000_SAU_CLOCK_SELECT_CK00 | _0000_SAU_CLOCK_MODE_CKS |
             _0000_SAU_TRIGGER_SOFTWARE | _0000_SAU_MODE_CSI | _0000_SAU_TRANSFER_END;
-    SCR00 = _C000_SAU_RECEPTION_TRANSMISSION | _3000_SAU_TIMING_4 | _0000_SAU_MSB | _0007_SAU_LENGTH_8;
-    SDR00 = _1E00_CSI00_DIVISOR;
-    SO0 &= ~_0100_SAU_CH0_CLOCK_OUTPUT_1;    /* CSI00 clock initial level */
-    SO0 &= ~_0001_SAU_CH0_DATA_OUTPUT_1;    /* CSI00 SO initial level */
-    SOE0 |= _0001_SAU_CH0_OUTPUT_ENABLE;    /* enable CSI00 output */
-    /* Set SI00 pin */
-    PM5 |= 0x01U;
-    /* Set SO00 pin */
-    P5 |= 0x02U;
-    PM5 &= 0xFDU;
-    /* Set SCK00 pin */
-    P3 |= 0x01U;
-    PM3 &= 0xFEU;
+    SCR10 = _C000_SAU_RECEPTION_TRANSMISSION | _3000_SAU_TIMING_4 | _0000_SAU_MSB | _0007_SAU_LENGTH_8;
+    SDR10 = _1E00_CSI20_DIVISOR;
+    SO1 &= ~_0100_SAU_CH0_CLOCK_OUTPUT_1;    /* CSI20 clock initial level */
+    SO1 &= ~_0001_SAU_CH0_DATA_OUTPUT_1;    /* CSI20 SO initial level */
+    SOE1 |= _0001_SAU_CH0_OUTPUT_ENABLE;    /* enable CSI20 output */
+    /* Set SI20 pin */
+    PM1 |= 0x10U;
+    /* Set SO20 pin */
+    PMC1 &= 0xF7U;
+    P1 |= 0x08U;
+    PM1 &= 0xF7U;
+    /* Set SCK20 pin */
+    P1 |= 0x20U;
+    PM1 &= 0xDFU;
 }
 
 /***********************************************************************************************************************
-* Function Name: R_CSI00_Start
-* Description  : This function starts the CSI00 module operation.
+* Function Name: R_CSI20_Start
+* Description  : This function starts the CSI20 module operation.
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
-void R_CSI00_Start(void)
+void R_CSI20_Start(void)
 {
-    SO0 &= ~_0100_SAU_CH0_CLOCK_OUTPUT_1;   /* CSI00 clock initial level */
-    SO0 &= ~_0001_SAU_CH0_DATA_OUTPUT_1;           /* CSI00 SO initial level */
-    SOE0 |= _0001_SAU_CH0_OUTPUT_ENABLE;           /* enable CSI00 output */
-    SS0 |= _0001_SAU_CH0_START_TRG_ON;             /* enable CSI00 */
+    SO1 &= ~_0100_SAU_CH0_CLOCK_OUTPUT_1;   /* CSI20 clock initial level */
+    SO1 &= ~_0001_SAU_CH0_DATA_OUTPUT_1;           /* CSI20 SO initial level */
+    SOE1 |= _0001_SAU_CH0_OUTPUT_ENABLE;           /* enable CSI20 output */
+    SS1 |= _0001_SAU_CH0_START_TRG_ON;             /* enable CSI20 */
 }
 
 /***********************************************************************************************************************
-* Function Name: R_CSI00_Stop
-* Description  : This function stops the CSI00 module operation.
+* Function Name: R_CSI20_Stop
+* Description  : This function stops the CSI20 module operation.
 * Arguments    : None
 * Return Value : None
 ***********************************************************************************************************************/
-void R_CSI00_Stop(void)
+void R_CSI20_Stop(void)
 {
-    CSIMK00 = 1U;    /* disable INTCSI00 interrupt */
-    ST0 |= _0001_SAU_CH0_STOP_TRG_ON;        /* disable CSI00 */
-    SOE0 &= ~_0001_SAU_CH0_OUTPUT_ENABLE;    /* disable CSI00 output */
+    CSIMK20 = 1U;    /* disable INTCSI20 interrupt */
+    ST1 |= _0001_SAU_CH0_STOP_TRG_ON;        /* disable CSI20 */
+    SOE1 &= ~_0001_SAU_CH0_OUTPUT_ENABLE;    /* disable CSI20 output */
 }
 
 /*******************************************************************************************************************//**

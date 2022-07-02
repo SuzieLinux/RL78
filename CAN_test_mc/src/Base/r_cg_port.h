@@ -1,8 +1,7 @@
 /**
  * @file   r_cg_port.h
  * @author Michel Catudal
- * @date   23 June 2022
- * @version 0.1
+ * @date   2 July 2022
  * @brief  port driver
  *
 */

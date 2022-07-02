@@ -16,8 +16,8 @@ Includes
 #include "spi.h"
 #include "pcan.h"
 #include "dcan.h"
-#include "RtkSched.h"
-#include "RtkTasks.h"
+#include "Scheduler.h"
+#include "Tasks.h"
 
 /***********************************************************************************************************************
 Global variables and functions
@@ -49,7 +49,7 @@ void main(void)
 {
     InitScheduler();
     DRV_CANFDSPI_CS = 1;
-    R_CSI00_Start();
+    R_CSI20_Start();
     vPCAN_eInit();
 
     EI();
