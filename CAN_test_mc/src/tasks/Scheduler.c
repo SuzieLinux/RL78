@@ -25,8 +25,12 @@ static uint16_t Count1sec;
  */
 void InitScheduler(void)
 {
-    CountRTC = 0;
-    R_IT_Start();
+	Count10msecs = 0;
+	Count50msecs = 0;
+	Count100msecs = 0;
+	Count1sec = 0;
+
+	R_IT_Start();
 }
 
 /*****************************************************************************
