@@ -76,10 +76,10 @@ __interrupt static void vRtk_eRealTimeFunction(void)
 {
 	Count10msecs++;
 	if (!Count10msecs) Count10msecs--;
-	Count50msecs++
-		if (!Count50msecs) Count50msecs--;
-	Count100msecs++
-		if (!Count100msecs) Count100msecs--;
+	Count50msecs++;
+	if (!Count50msecs) Count50msecs--;
+	Count100msecs++;
+	if (!Count100msecs) Count100msecs--;
 	Count1sec++;
 	if (!Count1sec) Count1sec--;
 }
