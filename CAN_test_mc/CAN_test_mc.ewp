@@ -380,7 +380,7 @@
                     <name>CCIncludePath2</name>
                     <state>$PROJ_DIR$\src\Base</state>
                     <state>$PROJ_DIR$\src\can</state>
-                    <state>$PROJ_DIR$\src\Rtk</state>
+                    <state>$PROJ_DIR$\src\tasks</state>
                     <state>$PROJ_DIR$\src\spi</state>
                 </option>
                 <option>
@@ -2093,7 +2093,7 @@
         <name>$PROJ_DIR$\src\Base\r_cg_cgc_user.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\src\Rtk\r_cg_it.c</name>
+        <name>$PROJ_DIR$\src\tasks\r_cg_it.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\src\Base\r_cg_port.c</name>
@@ -2102,12 +2102,12 @@
         <name>$PROJ_DIR$\src\Base\r_systeminit.c</name>
     </file>
     <file>
-        <name>$PROJ_DIR$\src\Rtk\RtkSched.c</name>
-    </file>
-    <file>
-        <name>$PROJ_DIR$\src\Rtk\RtkTasks.c</name>
+        <name>$PROJ_DIR$\src\tasks\Scheduler.c</name>
     </file>
     <file>
         <name>$PROJ_DIR$\src\spi\spi.c</name>
+    </file>
+    <file>
+        <name>$PROJ_DIR$\src\tasks\Tasks.c</name>
     </file>
 </project>

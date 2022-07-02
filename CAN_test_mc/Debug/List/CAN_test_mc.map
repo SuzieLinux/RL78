@@ -1,31 +1,31 @@
 ###############################################################################
 #
-# IAR ELF Linker V4.21.3.2447/W32 for RL78                02/Jul/2022  09:49:34
+# IAR ELF Linker V4.21.3.2447/W32 for RL78                02/Jul/2022  14:22:43
 # Copyright 2011-2021 IAR Systems AB.
 #
 #    Output file  =
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Exe\CAN_test_mc.out
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Exe\CAN_test_mc.out
 #    Map file     =
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\List\CAN_test_mc.map
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\List\CAN_test_mc.map
 #    Command line =
-#        -f C:\Users\miche\AppData\Local\Temp\EW3539.tmp
-#        (C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\dcan.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\LibReplacement.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\main.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\pcan.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\r_cg_cgc.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\r_cg_cgc_user.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\r_cg_it.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\r_cg_port.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\r_systeminit.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\RtkSched.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\RtkTasks.o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj\spi.o
+#        -f C:\Users\miche\AppData\Local\Temp\EW48C0.tmp
+#        (C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\dcan.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\LibReplacement.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\main.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\pcan.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\r_cg_cgc.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\r_cg_cgc_user.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\r_cg_it.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\r_cg_port.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\r_systeminit.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\Scheduler.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\spi.o
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj\Tasks.o
 #        --no_out_extension -o
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Exe\CAN_test_mc.out
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Exe\CAN_test_mc.out
 #        --config_def __RESERVE_OCD_ROM=1 --config_def
 #        __RESERVE_OCD_TRACE_RAM=0 --config_def __RESERVE_HOTPLUGIN_RAM=0 --map
-#        C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\List\CAN_test_mc.map
+#        C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\List\CAN_test_mc.map
 #        --config "C:\Program Files (x86)\IAR Systems\Embedded Workbench
 #        8.5\rl78\config\lnkr5f104bg.icf" --config_def _STACK_SIZE=128
 #        --config_def _NEAR_HEAP_SIZE=256 --config_def _FAR_HEAP_SIZE=4096
@@ -84,9 +84,6 @@ define block OPT_BYTE
 define block SECUR_ID
    with size = 10 { R_SECUR_ID, ro section .security_id, ro section SECUID };
 "A3":  place at address 0xc4 { block SECUR_ID };
-"MIRROR":
-       place in [from 0x3000 to 0xbeff] with mirroring to 0xf'3000 {
-          ro R_CONST_init, ro section .const, ro section .switch };
 "ROMNEAR":
        place in [from 0xd8 to 0xffff] { R_TEXT, ro section .text };
 define block INIT_ARRAY
@@ -132,6 +129,7 @@ No sections matched the following patterns:
   R_TEXTF_UNIT64KP               in "ROMFAR"
   ro R_CONST_init                in "MIRROR"
   ro section .callt0             in "CALLT"
+  ro section .const              in "MIRROR"
   ro section .constf             in "ROMFAR"
   ro section .consth             in "ROMHUGE"
   ro section .init_array         in block INIT_ARRAY
@@ -178,81 +176,80 @@ No sections matched the following patterns:
     SECUID         const        0xc4    0xa  main.o [1]
                               - 0xce    0xa
 
-"MIRROR":                              0x22
-  .const           const      0x3000   0x12  RtkSched.o [1]
-  .const           const      0x3012   0x10  RtkTasks.o [1]
-                            - 0x3022   0x22
-
-"ROMNEAR":                            0x997
-  .text            ro code    0x3022  0x531  dcan.o [1]
-  .text            ro code    0x3553  0x1dd  spi.o [1]
-  .text            ro code    0x3730   0xbf  RtkSched.o [1]
-  .text            ro code    0x37ef   0xbb  l03.o [3]
-  .text            ro code    0x38aa   0x3a  cstartup.o [3]
-  .text            ro code    0x38e4   0x26  r_cg_it.o [1]
-  .text            ro code    0x390a   0x24  r_systeminit.o [1]
-  .text            ro code    0x392e   0x14  r_cg_port.o [1]
-  .text            ro code    0x3942   0x13  default_handler.o [3]
-  .text            ro code    0x3955   0x12  main.o [1]
-  .text            ro code    0x3967   0x11  r_cg_cgc.o [1]
-  .text            ro code    0x3978   0x11  __dbg_xxexit.o [2]
-  .text            ro code    0x3989    0xc  l02.o [3]
-  .text            ro code    0x3995    0xa  __dbg_abort.o [2]
-  .text            ro code    0x399f    0x9  RtkTasks.o [1]
-  .text            ro code    0x39a8    0x5  cexit.o [3]
-  .text            ro code    0x39ad    0x3  pcan.o [1]
-  .text            ro code    0x39b0    0x3  r_cg_cgc_user.o [1]
-  .text            ro code    0x39b3    0x3  exit.o [3]
-  .text            ro code    0x39b6    0x3  __dbg_break.o [2]
-                            - 0x39b9  0x997
+"ROMNEAR":                            0x954
+  .text            ro code      0xd8  0x531  dcan.o [1]
+  .text            ro code     0x609  0x1e1  spi.o [1]
+  .text            ro code     0x7ea   0xbb  l03.o [3]
+  .text            ro code     0x8a5   0x78  Scheduler.o [1]
+  .text            ro code     0x91d   0x3a  cstartup.o [3]
+  .text            ro code     0x957   0x26  r_cg_it.o [1]
+  .text            ro code     0x97d   0x24  r_systeminit.o [1]
+  .text            ro code     0x9a1   0x19  r_cg_port.o [1]
+  .text            ro code     0x9ba   0x13  default_handler.o [3]
+  .text            ro code     0x9cd   0x12  main.o [1]
+  .text            ro code     0x9df   0x11  r_cg_cgc.o [1]
+  .text            ro code     0x9f0   0x11  __dbg_xxexit.o [2]
+  .text            ro code     0xa01    0xc  l02.o [3]
+  .text            ro code     0xa0d    0xa  __dbg_abort.o [2]
+  .text            ro code     0xa17    0x5  cexit.o [3]
+  .text            ro code     0xa1c    0x4  Tasks.o [1]
+  .text            ro code     0xa20    0x3  pcan.o [1]
+  .text            ro code     0xa23    0x3  r_cg_cgc_user.o [1]
+  .text            ro code     0xa26    0x3  exit.o [3]
+  .text            ro code     0xa29    0x3  __dbg_break.o [2]
+                             - 0xa2c  0x954
 
 "ROMFAR":                               0x8
-  .iar.init_table  const      0x39ba    0x8  - Linker created -
-                            - 0x39c2    0x8
+  .iar.init_table  const       0xa2c    0x8  - Linker created -
+                             - 0xa34    0x8
 
 "ROMHUGE":                             0x66
-  .textf           ro code    0x39c2   0x41  data_init.o [3]
-  .textf           ro code    0x3a03   0x25  near_zero_init.o [3]
-                            - 0x3a28   0x66
+  .textf           ro code     0xa34   0x41  data_init.o [3]
+  .textf           ro code     0xa75   0x25  near_zero_init.o [3]
+                             - 0xa9a   0x66
 
-Absolute sections, part 1 of 19:        0x2
-  .bss.noinit      uninit   0xf'0060    0x1  r_cg_port.o [1]
-  .bss.noinit      uninit   0xf'0061    0x1  r_cg_port.o [1]
-                          - 0xf'0062    0x2
+Absolute sections, part 1 of 20:        0x1
+  .bss.noinit      uninit   0xf'0061    0x1  spi.o [1]
+                          - 0xf'0062    0x1
 
-Absolute sections, part 2 of 19:        0x3
+Absolute sections, part 2 of 20:        0x1
+  .bss.noinit      uninit   0xf'006e    0x1  r_cg_port.o [1]
+                          - 0xf'006f    0x1
+
+Absolute sections, part 3 of 20:        0x4
+  .bss.noinit      uninit   0xf'0076    0x1  r_cg_port.o [1]
   .bss.noinit      uninit   0xf'0077    0x1  r_systeminit.o [1]
   .bss.noinit      uninit   0xf'0078    0x1  r_systeminit.o [1]
   .bss.noinit      uninit   0xf'0079    0x1  r_systeminit.o [1]
-                          - 0xf'007a    0x3
+                          - 0xf'007a    0x4
 
-Absolute sections, part 3 of 19:        0x1
+Absolute sections, part 4 of 20:        0x1
   .bss.noinit      uninit   0xf'00f0    0x1  spi.o [1]
                           - 0xf'00f1    0x1
 
-Absolute sections, part 4 of 19:        0x1
+Absolute sections, part 5 of 20:        0x1
   .bss.noinit      uninit   0xf'00f3    0x1  r_cg_cgc.o [1]
                           - 0xf'00f4    0x1
 
-Absolute sections, part 5 of 19:        0x2
-  .bss.noinit      uninit   0xf'0108    0x2  spi.o [1]
-                          - 0xf'010a    0x2
+Absolute sections, part 6 of 20:        0x2
+  .bss.noinit      uninit   0xf'0148    0x2  spi.o [1]
+                          - 0xf'014a    0x2
 
-Absolute sections, part 6 of 19:        0x2
-  .bss.noinit      uninit   0xf'0110    0x2  spi.o [1]
-                          - 0xf'0112    0x2
+Absolute sections, part 7 of 20:        0x2
+  .bss.noinit      uninit   0xf'0150    0x2  spi.o [1]
+                          - 0xf'0152    0x2
 
-Absolute sections, part 7 of 19:        0x2
-  .bss.noinit      uninit   0xf'0118    0x2  spi.o [1]
-                          - 0xf'011a    0x2
+Absolute sections, part 8 of 20:        0x2
+  .bss.noinit      uninit   0xf'0158    0x2  spi.o [1]
+                          - 0xf'015a    0x2
 
-Absolute sections, part 8 of 19:        0xa
-  .bss.noinit      uninit   0xf'0122    0x2  spi.o [1]
-  .bss.noinit      uninit   0xf'0124    0x2  spi.o [1]
-  .bss.noinit      uninit   0xf'0126    0x2  spi.o [1]
-  .bss.noinit      uninit   0xf'0128    0x2  spi.o [1]
-  .bss.noinit      uninit   0xf'012a    0x2  spi.o [1]
-                          - 0xf'012c    0xa
+Absolute sections, part 9 of 20:        0xa
+  .bss.noinit      uninit   0xf'0162    0x2  spi.o [1]
+  .bss.noinit      uninit   0xf'0164    0x2  spi.o [1]
+  .bss.noinit      uninit   0xf'0166    0x2  spi.o [1]
+  .bss.noinit      uninit   0xf'0168    0x2  spi.o [1]
+  .bss.noinit      uninit   0xf'016a    0x2  spi.o [1]
+                          - 0xf'016c    0xa
 
 "RAMNEAR", part 1 of 2:                0x80
   CSTACK                    0xf'bf00   0x80  <Block>
@@ -260,61 +257,59 @@ Absolute sections, part 8 of 19:        0xa
     CSTACK         uninit   0xf'bf00   0x80  <Block tail>
                           - 0xf'bf80   0x80
 
-"RAMNEAR", part 2 of 2:                0xc4
+"RAMNEAR", part 2 of 2:                0xc7
   .bss             zero     0xf'bf80   0x60  spi.o [1]
   .bss             zero     0xf'bfe0   0x60  spi.o [1]
-  .bss             zero     0xf'c040    0x3  RtkSched.o [1]
-  .bss             zero     0xf'c043    0x1  dcan.o [1]
-                          - 0xf'c044   0xc4
+  .bss             zero     0xf'c040    0x6  Scheduler.o [1]
+  .bss             zero     0xf'c046    0x1  dcan.o [1]
+                          - 0xf'c047   0xc7
 
 "SADDRMEM":                             0x0
   .wrkseg          rw data  0xf'fe20    0x0  cstartup.o [3]
 
-Absolute sections, part 9 of 19:        0x1
-  .sbss.noinit     uninit   0xf'ff03    0x1  spi.o [1]
-                          - 0xf'ff04    0x1
+Absolute sections, part 10 of 20:       0x1
+  .sbss.noinit     uninit   0xf'ff01    0x1  spi.o [1]
+                          - 0xf'ff02    0x1
 
-Absolute sections, part 10 of 19:       0x2
-  .sbss.noinit     uninit   0xf'ff05    0x1  spi.o [1]
-  .sbss.noinit     uninit   0xf'ff06    0x1  spi.o [1]
-                          - 0xf'ff07    0x2
+Absolute sections, part 11 of 20:       0x1
+  .sbss.noinit     uninit   0xf'ff0e    0x1  spi.o [1]
+                          - 0xf'ff0f    0x1
 
-Absolute sections, part 11 of 19:       0x2
+Absolute sections, part 12 of 20:       0x2
   .sbss.noinit     uninit   0xf'ff10    0x2  spi.o [1]
                           - 0xf'ff12    0x2
 
-Absolute sections, part 12 of 19:       0x2
-  .bss.noinit      uninit   0xf'ff20    0x1  r_cg_port.o [1]
-  .bss.noinit      uninit   0xf'ff21    0x1  r_cg_port.o [1]
-                          - 0xf'ff22    0x2
+Absolute sections, part 13 of 20:       0x2
+  .bss.noinit      uninit   0xf'ff21    0x1  spi.o [1]
+  .bss.noinit      uninit   0xf'ff22    0x1  r_cg_port.o [1]
+                          - 0xf'ff23    0x2
 
-Absolute sections, part 13 of 19:       0x1
-  .bss.noinit      uninit   0xf'ff23    0x1  spi.o [1]
-                          - 0xf'ff24    0x1
+Absolute sections, part 14 of 20:       0x1
+  .bss.noinit      uninit   0xf'ff2e    0x1  r_cg_port.o [1]
+                          - 0xf'ff2f    0x1
 
-Absolute sections, part 14 of 19:       0x2
-  .bss.noinit      uninit   0xf'ff25    0x1  spi.o [1]
-  .bss.noinit      uninit   0xf'ff26    0x1  r_cg_port.o [1]
-                          - 0xf'ff27    0x2
+Absolute sections, part 15 of 20:       0x2
+  .bss.noinit      uninit   0xf'ff48    0x2  spi.o [1]
+                          - 0xf'ff4a    0x2
 
-Absolute sections, part 15 of 19:       0x2
+Absolute sections, part 16 of 20:       0x2
   .bss.noinit      uninit   0xf'ff90    0x2  r_cg_it.o [1]
                           - 0xf'ff92    0x2
 
-Absolute sections, part 16 of 19:       0x2
+Absolute sections, part 17 of 20:       0x2
   .bss.noinit      uninit   0xf'ffa0    0x1  r_cg_cgc.o [1]
   .bss.noinit      uninit   0xf'ffa1    0x1  r_cg_cgc.o [1]
                           - 0xf'ffa2    0x2
 
-Absolute sections, part 17 of 19:       0x1
+Absolute sections, part 18 of 20:       0x1
   .bss.noinit      uninit   0xf'ffa4    0x1  r_cg_cgc.o [1]
                           - 0xf'ffa5    0x1
 
-Absolute sections, part 18 of 19:       0x1
+Absolute sections, part 19 of 20:       0x1
   .bss.noinit      uninit   0xf'ffa8    0x1  r_cg_cgc_user.o [1]
                           - 0xf'ffa9    0x1
 
-Absolute sections, part 19 of 19:      0x10
+Absolute sections, part 20 of 20:      0x10
   .bss.noinit      uninit   0xf'ffe0    0x2  spi.o [1]
   .bss.noinit      uninit   0xf'ffe2    0x2  r_cg_it.o [1]
   .bss.noinit      uninit   0xf'ffe4    0x2  spi.o [1]
@@ -329,10 +324,8 @@ Unused ranges:
 
       From        To      Size
       ----        --      ----
-      0xd8    0x2fff    0x2f28
-    0x39b9    0x39b9       0x1
-    0x3a28  0x1'fdff  0x1'c3d8
-  0xf'c044  0xf'fe1f    0x3ddc
+     0xa9a  0x1'fdff  0x1'f366
+  0xf'c047  0xf'fe1f    0x3dd9
   0xf'fe20  0xf'fedf      0xc0
 
 
@@ -343,8 +336,8 @@ Unused ranges:
           Address   Size
           -------   ----
 Zero (___iar_zero_init_near2)
-    1 destination range, total size 0xc4:
-          0xf'bf80  0xc4
+    1 destination range, total size 0xc7:
+          0xf'bf80  0xc7
 
 
 
@@ -359,20 +352,20 @@ command line/config:
     ------------------------------------------------------
     Total:
 
-C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj: [1]
-    RtkSched.o              191       18        3
-    RtkTasks.o                9       16
+C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj: [1]
+    Scheduler.o             120                 6
+    Tasks.o                   4
     dcan.o                1'329                 1
     main.o                   18       14
     pcan.o                    3
     r_cg_cgc.o               17                          4
     r_cg_cgc_user.o           3                          1
     r_cg_it.o                38                         10
-    r_cg_port.o              20                          5
+    r_cg_port.o              25                          4
     r_systeminit.o           36                          3
-    spi.o                   477               192       32
+    spi.o                   481               192       33
     ------------------------------------------------------
-    Total:                2'141       48      196       55
+    Total:                2'074       14      199       55
 
 dbgrlnnf23nd.a: [2]
     __dbg_abort.o            10
@@ -396,7 +389,7 @@ dlrlnnf23n.a: [3]
 
     Linker created                     8      128
 ----------------------------------------------------------
-    Grand Total:          2'557      182      324       55
+    Grand Total:          2'490      148      327       55
 
 
 *******************************************************************************
@@ -405,43 +398,52 @@ dlrlnnf23n.a: [3]
 
 Entry                    Address   Size  Type      Object
 -----                    -------   ----  ----      ------
-.iar.init_table$$Base     0x39ba          --   Gb  - Linker created -
-.iar.init_table$$Limit    0x39c2          --   Gb  - Linker created -
-?L_IOR_L03                0x3849         Code  Gb  l03.o [3]
-?L_LSH_L03                0x37ef         Code  Gb  l03.o [3]
-?L_NEG_L03                0x3891         Code  Gb  l03.o [3]
-?L_SUB_L03                0x3820         Code  Gb  l03.o [3]
-?UI_RSH_L02               0x3989         Code  Gb  l02.o [3]
-?UL_CMP_L03               0x3872         Code  Gb  l03.o [3]
-?UL_RSH_L03               0x3804         Code  Gb  l03.o [3]
+.iar.init_table$$Base      0xa2c          --   Gb  - Linker created -
+.iar.init_table$$Limit     0xa34          --   Gb  - Linker created -
+?L_IOR_L03                 0x844         Code  Gb  l03.o [3]
+?L_LSH_L03                 0x7ea         Code  Gb  l03.o [3]
+?L_NEG_L03                 0x88c         Code  Gb  l03.o [3]
+?L_SUB_L03                 0x81b         Code  Gb  l03.o [3]
+?UI_RSH_L02                0xa01         Code  Gb  l02.o [3]
+?UL_CMP_L03                0x86d         Code  Gb  l03.o [3]
+?UL_RSH_L03                0x7ff         Code  Gb  l03.o [3]
 CSTACK$$Base            0xf'bf00          --   Gb  - Linker created -
 CSTACK$$Limit           0xf'bf80          --   Gb  - Linker created -
 OPT_BYTE$$Base              0xc0          --   Gb  - Linker created -
 OPT_BYTE$$Limit             0xc4          --   Gb  - Linker created -
-Region$$Table$$Base       0x39ba          --   Gb  - Linker created -
-Region$$Table$$Limit      0x39c2          --   Gb  - Linker created -
+Region$$Table$$Base        0xa2c          --   Gb  - Linker created -
+Region$$Table$$Limit       0xa34          --   Gb  - Linker created -
 SECUR_ID$$Base              0xc4          --   Gb  - Linker created -
 SECUR_ID$$Limit             0xce          --   Gb  - Linker created -
-_CstRtk_iTaskEntry      0xf'3000   0x12  Data  Gb  RtkSched.o [1]
-_CuiRtk_eTabActiv       0xf'3012   0x10  Data  Gb  RtkTasks.o [1]
+_Count100msecs          0xf'c042    0x1  Data  Lc  Scheduler.o [1]
+_Count10msecs           0xf'c040    0x1  Data  Lc  Scheduler.o [1]
+_Count1sec              0xf'c044    0x2  Data  Lc  Scheduler.o [1]
+_Count50msecs           0xf'c041    0x1  Data  Lc  Scheduler.o [1]
+_InitScheduler             0x8a5   0x10  Code  Gb  Scheduler.o [1]
 _NEAR_CONST_LOCATION {Abs}
                              0x0         Data  Gb  <internal module>
-_R_CGC_Create             0x3967   0x11  Code  Gb  r_cg_cgc.o [1]
-_R_CGC_Get_ResetSource    0x39b0    0x3  Code  Gb  r_cg_cgc_user.o [1]
-_R_CSI00_Create           0x355f   0x4b  Code  Gb  spi.o [1]
-_R_CSI00_Start            0x35aa   0x1b  Code  Gb  spi.o [1]
-_R_IT_Create              0x38e4   0x19  Code  Gb  r_cg_it.o [1]
-_R_IT_Start               0x38fd    0xd  Code  Gb  r_cg_it.o [1]
-_R_PORT_Create            0x392e   0x14  Code  Gb  r_cg_port.o [1]
-_R_SAU0_Create            0x3553    0xc  Code  Gb  spi.o [1]
-_R_Systeminit             0x390a   0x1c  Code  Gb  r_systeminit.o [1]
-_SPI_ReadByte             0x3626   0x22  Code  Gb  spi.o [1]
-_SPI_ReadWord             0x365d   0x72  Code  Gb  spi.o [1]
-_SPI_Send_Receive         0x35ce   0x58  Code  Gb  spi.o [1]
-_SPI_WriteByte            0x3648   0x15  Code  Gb  spi.o [1]
-_SPI_WriteHalfWord        0x3703   0x2d  Code  Gb  spi.o [1]
-_SPI_WriteWord            0x36cf   0x34  Code  Gb  spi.o [1]
-_SPI_wait                 0x35c5    0x9  Code  Gb  spi.o [1]
+_R_CGC_Create              0x9df   0x11  Code  Gb  r_cg_cgc.o [1]
+_R_CGC_Get_ResetSource     0xa23    0x3  Code  Gb  r_cg_cgc_user.o [1]
+_R_CSI20_Create            0x615   0x4f  Code  Lc  spi.o [1]
+_R_CSI20_Start             0x664   0x1b  Code  Gb  spi.o [1]
+_R_IT_Create               0x957   0x19  Code  Gb  r_cg_it.o [1]
+_R_IT_Start                0x970    0xd  Code  Gb  r_cg_it.o [1]
+_R_PORT_Create             0x9a1   0x19  Code  Gb  r_cg_port.o [1]
+_R_SAU1_Create             0x609    0xc  Code  Gb  spi.o [1]
+_R_Systeminit              0x97d   0x1c  Code  Gb  r_systeminit.o [1]
+_SPI_ReadByte              0x6e0   0x22  Code  Gb  spi.o [1]
+_SPI_ReadWord              0x717   0x72  Code  Gb  spi.o [1]
+_SPI_Send_Receive          0x688   0x58  Code  Gb  spi.o [1]
+_SPI_WriteByte             0x702   0x15  Code  Gb  spi.o [1]
+_SPI_WriteHalfWord         0x7bd   0x2d  Code  Gb  spi.o [1]
+_SPI_WriteWord             0x789   0x34  Code  Gb  spi.o [1]
+_SPI_wait                  0x67f    0x9  Code  Gb  spi.o [1]
+_Scheduler                 0x8b5   0x30  Code  Gb  Scheduler.o [1]
+_Task100msecs              0xa1e    0x1  Code  Gb  Tasks.o [1]
+_Task10msecs               0xa1c    0x1  Code  Gb  Tasks.o [1]
+_Task1sec                  0xa1f    0x1  Code  Gb  Tasks.o [1]
+_Task50msecs               0xa1d    0x1  Code  Gb  Tasks.o [1]
+__A_ADPC                0xf'0076    0x1  Data  Gb  r_cg_port.o [1]
 __A_CKC                 0xf'ffa4    0x1  Data  Gb  r_cg_cgc.o [1]
 __A_CMC                 0xf'ffa0    0x1  Data  Gb  r_cg_cgc.o [1]
 __A_CSC                 0xf'ffa1    0x1  Data  Gb  r_cg_cgc.o [1]
@@ -452,65 +454,62 @@ __A_ITMC                0xf'ff90    0x2  Data  Gb  r_cg_it.o [1]
 __A_MK0                 0xf'ffe4    0x2  Data  Gb  spi.o [1]
 __A_MK1                 0xf'ffe6    0x2  Data  Gb  r_cg_it.o [1]
 __A_OSMC                0xf'00f3    0x1  Data  Gb  r_cg_cgc.o [1]
-__A_P3                  0xf'ff03    0x1  Data  Gb  spi.o [1]
-__A_P5                  0xf'ff05    0x1  Data  Gb  spi.o [1]
-__A_P6                  0xf'ff06    0x1  Data  Gb  spi.o [1]
+__A_P1                  0xf'ff01    0x1  Data  Gb  spi.o [1]
+__A_P14                 0xf'ff0e    0x1  Data  Gb  spi.o [1]
 __A_PER0                0xf'00f0    0x1  Data  Gb  spi.o [1]
 __A_PIOR0               0xf'0077    0x1  Data  Gb  r_systeminit.o [1]
 __A_PIOR1               0xf'0079    0x1  Data  Gb  r_systeminit.o [1]
-__A_PM0                 0xf'ff20    0x1  Data  Gb  r_cg_port.o [1]
-__A_PM1                 0xf'ff21    0x1  Data  Gb  r_cg_port.o [1]
-__A_PM3                 0xf'ff23    0x1  Data  Gb  spi.o [1]
-__A_PM5                 0xf'ff25    0x1  Data  Gb  spi.o [1]
-__A_PM6                 0xf'ff26    0x1  Data  Gb  r_cg_port.o [1]
-__A_PMC0                0xf'0060    0x1  Data  Gb  r_cg_port.o [1]
-__A_PMC1                0xf'0061    0x1  Data  Gb  r_cg_port.o [1]
+__A_PM1                 0xf'ff21    0x1  Data  Gb  spi.o [1]
+__A_PM14                0xf'ff2e    0x1  Data  Gb  r_cg_port.o [1]
+__A_PM2                 0xf'ff22    0x1  Data  Gb  r_cg_port.o [1]
+__A_PMC1                0xf'0061    0x1  Data  Gb  spi.o [1]
+__A_PMC14               0xf'006e    0x1  Data  Gb  r_cg_port.o [1]
 __A_PR00                0xf'ffe8    0x2  Data  Gb  spi.o [1]
 __A_PR01                0xf'ffea    0x2  Data  Gb  r_cg_it.o [1]
 __A_PR10                0xf'ffec    0x2  Data  Gb  spi.o [1]
 __A_PR11                0xf'ffee    0x2  Data  Gb  r_cg_it.o [1]
 __A_RESF                0xf'ffa8    0x1  Data  Gb  r_cg_cgc_user.o [1]
-__A_SCR00               0xf'0118    0x2  Data  Gb  spi.o [1]
+__A_SCR10               0xf'0158    0x2  Data  Gb  spi.o [1]
 __A_SDR00               0xf'ff10    0x2  Data  Gb  spi.o [1]
-__A_SIR00               0xf'0108    0x2  Data  Gb  spi.o [1]
-__A_SMR00               0xf'0110    0x2  Data  Gb  spi.o [1]
-__A_SO0                 0xf'0128    0x2  Data  Gb  spi.o [1]
-__A_SOE0                0xf'012a    0x2  Data  Gb  spi.o [1]
-__A_SPS0                0xf'0126    0x2  Data  Gb  spi.o [1]
-__A_SS0                 0xf'0122    0x2  Data  Gb  spi.o [1]
-__A_ST0                 0xf'0124    0x2  Data  Gb  spi.o [1]
-__COM_lshl                0x37ef         Code  Gb  l03.o [3]
-__COM_lshr                0x3804         Code  Gb  l03.o [3]
-___DebugBreak             0x39b6    0x3  Code  Gb  __dbg_break.o [2]
-___exit                   0x3978   0x11  Code  Gb  __dbg_xxexit.o [2]
-___iar_data_init2         0x39c2   0x41  Code  Gb  data_init.o [3]
+__A_SDR10               0xf'ff48    0x2  Data  Gb  spi.o [1]
+__A_SIR10               0xf'0148    0x2  Data  Gb  spi.o [1]
+__A_SMR10               0xf'0150    0x2  Data  Gb  spi.o [1]
+__A_SO1                 0xf'0168    0x2  Data  Gb  spi.o [1]
+__A_SOE1                0xf'016a    0x2  Data  Gb  spi.o [1]
+__A_SPS1                0xf'0166    0x2  Data  Gb  spi.o [1]
+__A_SS1                 0xf'0162    0x2  Data  Gb  spi.o [1]
+__A_ST1                 0xf'0164    0x2  Data  Gb  spi.o [1]
+__COM_lshl                 0x7ea         Code  Gb  l03.o [3]
+__COM_lshr                 0x7ff         Code  Gb  l03.o [3]
+___DebugBreak              0xa29    0x3  Code  Gb  __dbg_break.o [2]
+___exit                    0x9f0   0x11  Code  Gb  __dbg_xxexit.o [2]
+___iar_data_init2          0xa34   0x41  Code  Gb  data_init.o [3]
 ___iar_default_interrupt_handler
-                          0x3942   0x13  Code  Lc  default_handler.o [3]
-___iar_lior               0x3849         Code  Gb  l03.o [3]
-___iar_lsub               0x3820         Code  Gb  l03.o [3]
-___iar_zero_init_near2    0x3a03   0x25  Code  Gb  near_zero_init.o [3]
-___interrupt_0x38         0x37ae         Code  Gb  RtkSched.o [1]
-___low_level_init         0x3926    0x8  Code  Gb  r_systeminit.o [1]
-__exit                    0x39a8         Code  Gb  cexit.o [3]
-__iar_exit_end            0x39ad         Code  Gb  cexit.o [3]
-__iar_program_start       0x38aa         Code  Gb  cstartup.o [3]
+                           0x9ba   0x13  Code  Lc  default_handler.o [3]
+___iar_lior                0x844         Code  Gb  l03.o [3]
+___iar_lsub                0x81b         Code  Gb  l03.o [3]
+___iar_zero_init_near2     0xa75   0x25  Code  Gb  near_zero_init.o [3]
+___interrupt_0x38          0x8e5         Code  Gb  Scheduler.o [1]
+___low_level_init          0x999    0x8  Code  Gb  r_systeminit.o [1]
+__exit                     0xa17         Code  Gb  cexit.o [3]
+__iar_exit_end             0xa1c         Code  Gb  cexit.o [3]
+__iar_program_start        0x91d         Code  Gb  cstartup.o [3]
 __link_file_version_2 {Abs}
                              0x1         Data  Gb  <internal module>
-__program_end             0x38e4         Code  Gb  cstartup.o [3]
-_abort                    0x3995    0xa  Code  Gb  __dbg_abort.o [2]
-_exit                     0x39b3    0x3  Code  Gb  exit.o [3]
-_iDCAN_eInit              0x3022  0x280  Code  Gb  dcan.o [1]
+__program_end              0x957         Code  Gb  cstartup.o [3]
+_abort                     0xa0d    0xa  Code  Gb  __dbg_abort.o [2]
+_exit                      0xa26    0x3  Code  Gb  exit.o [3]
+_iDCAN_eInit                0xd8  0x280  Code  Gb  dcan.o [1]
 _iDCAN_iFilterMaskConfigure
-                          0x3453   0x63  Code  Lc  dcan.o [1]
+                           0x509   0x63  Code  Lc  dcan.o [1]
 _iDCAN_iFilterObjectConfigure
-                          0x33f0   0x63  Code  Lc  dcan.o [1]
-_iDCAN_iSetCAN_Speed      0x34b6   0x9d  Code  Lc  dcan.o [1]
+                           0x4a6   0x63  Code  Lc  dcan.o [1]
+_iDCAN_iSetCAN_Speed       0x56c   0x9d  Code  Lc  dcan.o [1]
 _iDCAN_iSetFilterAndMask
-                          0x32a2  0x14e  Code  Lc  dcan.o [1]
+                           0x358  0x14e  Code  Lc  dcan.o [1]
 _interrupt_vector_table
                              0x0         Data  Gb  interrupt_vector.o [3]
-_main                     0x3955   0x12  Code  Gb  main.o [1]
-_nRtk_eSemafor          0xf'c040    0x2  Data  Gb  RtkSched.o [1]
+_main                      0x9cd   0x12  Code  Gb  main.o [1]
 _opbyte0                    0xc0    0x1  Data  Gb  main.o [1]
 _opbyte1                    0xc1    0x1  Data  Gb  main.o [1]
 _opbyte2                    0xc2    0x1  Data  Gb  main.o [1]
@@ -518,31 +517,19 @@ _opbyte3                    0xc3    0x1  Data  Gb  main.o [1]
 _secuid                     0xc4    0xa  Data  Gb  main.o [1]
 _spiReceiveBuffer       0xf'bfe0   0x60  Data  Gb  spi.o [1]
 _spiTransmitBuffer      0xf'bf80   0x60  Data  Gb  spi.o [1]
-_ucDCAN_iCAN_Speed      0xf'c043    0x1  Data  Gb  dcan.o [1]
-_ucRtk_iCountRTC        0xf'c042    0x1  Data  Gb  RtkSched.o [1]
-_vPCAN_eInit              0x39ad    0x3  Code  Gb  pcan.o [1]
-_vRtk_eInitScheduler      0x3730    0x7  Code  Gb  RtkSched.o [1]
+_ucDCAN_iCAN_Speed      0xf'c046    0x1  Data  Gb  dcan.o [1]
+_vPCAN_eInit               0xa20    0x3  Code  Gb  pcan.o [1]
 _vRtk_eRealTimeFunction
-                          0x37ae   0x41  Code  Lc  RtkSched.o [1]
-_vRtk_eScheduler_Tsk      0x3737   0x77  Code  Gb  RtkSched.o [1]
-_vRtk_eTask10_Tsk         0x399f    0x1  Code  Gb  RtkTasks.o [1]
-_vRtk_eTask1280_Tsk       0x39a7    0x1  Code  Gb  RtkTasks.o [1]
-_vRtk_eTask160_Tsk        0x39a4    0x1  Code  Gb  RtkTasks.o [1]
-_vRtk_eTask20B_Tsk        0x39a1    0x1  Code  Gb  RtkTasks.o [1]
-_vRtk_eTask20_Tsk         0x39a0    0x1  Code  Gb  RtkTasks.o [1]
-_vRtk_eTask320_Tsk        0x39a5    0x1  Code  Gb  RtkTasks.o [1]
-_vRtk_eTask40_Tsk         0x39a2    0x1  Code  Gb  RtkTasks.o [1]
-_vRtk_eTask640_Tsk        0x39a6    0x1  Code  Gb  RtkTasks.o [1]
-_vRtk_eTask80_Tsk         0x39a3    0x1  Code  Gb  RtkTasks.o [1]
+                           0x8e5   0x38  Code  Lc  Scheduler.o [1]
 
 
-[1] = C:\Users\miche\Documents\gauges_117mm\misc_tests\RL78_G14_32p\CAN_test_mc\Debug\Obj
+[1] = C:\Users\miche\Documents\RL78\CAN_test_mc\Debug\Obj
 [2] = dbgrlnnf23nd.a
 [3] = dlrlnnf23n.a
 
-  2'557 bytes of readonly  code memory
-    182 bytes of readonly  data memory
-    324 bytes of readwrite data memory (+ 55 absolute)
+  2'490 bytes of readonly  code memory
+    148 bytes of readonly  data memory
+    327 bytes of readwrite data memory (+ 55 absolute)
 
 Errors: none
 Warnings: none

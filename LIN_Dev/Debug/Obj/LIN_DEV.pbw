@@ -156,6 +156,20 @@
     "scope": null
   },
   {
+    "ID": "c:@__BITS8",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "__BITS8",
+    "location": {
+      "column": "5",
+      "line": "67",
+      "path": "C:\\Program Files (x86)\\IAR Systems\\Embedded Workbench 8.5\\rl78\\inc\\ior5f1056a.h"
+    },
+    "name": "__BITS8",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:@T@__BITS8",
     "What": "Typedef",
     "defdec": "Def",
@@ -39072,7 +39086,7 @@
     "display": "void R_TAU0_Create(void)",
     "location": {
       "column": "6",
-      "line": "29",
+      "line": "25",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
     },
     "name": "R_TAU0_Create",
@@ -39086,7 +39100,7 @@
     "display": "void R_TAU0_Channel0_Start(void)",
     "location": {
       "column": "6",
-      "line": "91",
+      "line": "87",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
     },
     "name": "R_TAU0_Channel0_Start",
@@ -39100,7 +39114,7 @@
     "display": "void R_TAU0_Channel0_Stop(void)",
     "location": {
       "column": "6",
-      "line": "103",
+      "line": "99",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
     },
     "name": "R_TAU0_Channel0_Stop",
@@ -39114,7 +39128,7 @@
     "display": "void R_TAU0_Channel1_Start(void)",
     "location": {
       "column": "6",
-      "line": "115",
+      "line": "111",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
     },
     "name": "R_TAU0_Channel1_Start",
@@ -39128,7 +39142,7 @@
     "display": "void R_TAU0_Channel1_Stop(void)",
     "location": {
       "column": "6",
-      "line": "127",
+      "line": "123",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
     },
     "name": "R_TAU0_Channel1_Stop",
@@ -39142,7 +39156,7 @@
     "display": "void R_TAU0_Channel3_Start(void)",
     "location": {
       "column": "6",
-      "line": "139",
+      "line": "135",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
     },
     "name": "R_TAU0_Channel3_Start",
@@ -39156,7 +39170,7 @@
     "display": "void R_TAU0_Channel3_Stop(void)",
     "location": {
       "column": "6",
-      "line": "151",
+      "line": "147",
       "path": "C:\\Users\\miche\\Documents\\RL78\\LIN_Dev\\src\\generated\\r_cg_tau.c"
     },
     "name": "R_TAU0_Channel3_Stop",
