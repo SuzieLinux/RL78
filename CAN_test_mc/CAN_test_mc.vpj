@@ -136,12 +136,12 @@
 			<F N="src/can/pcan.c"/>
 			<F N="src/Base/r_cg_cgc.c"/>
 			<F N="src/Base/r_cg_cgc_user.c"/>
-			<F N="src/Rtk/r_cg_it.c"/>
+			<F N="src/tasks/r_cg_it.c"/>
 			<F N="src/Base/r_cg_port.c"/>
 			<F N="src/Base/r_systeminit.c"/>
-			<F N="src/Rtk/RtkSched.c"/>
-			<F N="src/Rtk/RtkTasks.c"/>
+			<F N="src/tasks/Scheduler.c"/>
 			<F N="src/spi/spi.c"/>
+			<F N="src/tasks/Tasks.c"/>
 		</Folder>
 		<Folder
 			Name="Header Files"
@@ -151,13 +151,13 @@
 			<F N="src/Base/main.h"/>
 			<F N="src/can/pcan.h"/>
 			<F N="src/Base/r_cg_cgc.h"/>
-			<F N="src/Rtk/r_cg_it.h"/>
+			<F N="src/tasks/r_cg_it.h"/>
 			<F N="src/Base/r_cg_port.h"/>
 			<F N="src/spi/r_cg_serial.h"/>
-			<F N="src/Rtk/RtkSched.h"/>
-			<F N="src/Rtk/RtkTasks.h"/>
+			<F N="src/tasks/Scheduler.h"/>
 			<F N="src/spi/spi.h"/>
 			<F N="src/Base/system.h"/>
+			<F N="src/tasks/Tasks.h"/>
 		</Folder>
 		<Folder
 			Name="Other Files"

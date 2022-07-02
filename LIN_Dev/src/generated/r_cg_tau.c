@@ -1,4 +1,4 @@
-/**
+
  * @file   r_cg_tau.c
  * @author Michel Catudal
  * @date   10 April 2022
@@ -16,10 +16,6 @@ Includes
 ***********************************************************************************************************************/
 #include "r_cg_macrodriver.h"
 #include "r_cg_tau.h"
-#include "r_cg_userdefine.h"
-#include "lin.h"
-#include "Rtksched.h"
-
 /***********************************************************************************************************************
 * Function Name: R_TAU0_Create
 * Description  : This function initializes the TAU0 module.
@@ -153,4 +149,4 @@ void R_TAU0_Channel3_Stop(void)
     TT0 |= _0008_TAU_CH3_STOP_TRG_ON;
     TMMK03 = 1U;    /* disable INTTM03 interrupt */
     TMIF03 = 0U;    /* clear INTTM03 interrupt flag */
-}
+
