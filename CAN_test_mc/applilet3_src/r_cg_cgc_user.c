@@ -14,12 +14,12 @@
 * following link:
 * http://www.renesas.com/disclaimer
 *
-* Copyright (C) 2011, 2020 Renesas Electronics Corporation. All rights reserved.
+* Copyright (C) 2011, 2021 Renesas Electronics Corporation. All rights reserved.
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
 * File Name    : r_cg_cgc_user.c
-* Version      : Applilet3 for RL78/G14 V2.05.05.01 [25 Nov 2020]
+* Version      : Applilet3 for RL78/G14 V2.05.06.02 [08 Nov 2021]
 * Device(s)    : R5F104BG
 * Tool-Chain   : IAR Systems iccrl78
 * Description  : This file implements device driver for CGC module.
