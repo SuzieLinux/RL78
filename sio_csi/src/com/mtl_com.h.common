@@ -1,0 +1,183 @@
+
+/*""FILE COMMENT""*******************************************************************************
+ * System Name	: Common header file
+ * File Name	: mtl_com.h
+ * Version		: 4.05R00
+ * Contents		: 
+ * Programmer	: (BRC)T.Shimizu/T.Sorimachi/Y.Tashiro/S.Kenjo/S.Ishimoto
+ * Note			: ----
+ ************************************************************************************************
+ *	Copyright (C) 2000(2001,2002,2003,2004,2005,2006,2007,2009,2010). Renesas Electronics Corporation.
+ *	and Renesas Solutions Corp., All rights reserved.
+ ************************************************************************************************
+ *""FILE COMMENT END""***************************************************************************/
+
+
+
+
+/*----------------------------------------------------------------------------------------------*
+	Definitions
+ *----------------------------------------------------------------------------------------------*/
+#if defined(MTL_MEM_FAR)
+	/* dummy */
+#elif defined(MTL_MEM_NEAR)
+	/* dummy */
+#else
+	#error "MTL_MEM_FAR, MTL_MEM_NEAR not defined"
+#endif
+#if defined(MTL_MEM_FAR) && defined(MTL_MEM_NEAR)
+	#error "Both MTL_MEM_FAR and MTL_MEM_NEAR are defined"
+#endif
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+#ifdef MTL_MEM_FAR										/* Definition of FAR					*/
+	#ifndef FAR
+		#define FAR				far
+	#endif
+	#ifndef NEAR
+		#define NEAR			near
+	#endif
+#endif
+
+#ifdef MTL_MEM_NEAR										/* Definition of NEAR					*/
+	#ifndef FAR
+		#define FAR
+	#endif
+	#ifndef NEAR
+		#define NEAR
+	#endif
+#endif
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+#define STATIC			static					 			/* For release						*/
+/* #define STATIC					*/						/* For debug						*/
+
+
+
+
+/*----------------------------------------------------------------------------------------------*
+	Types
+ *----------------------------------------------------------------------------------------------*/
+typedef unsigned char	uchar;								/* For Legacy S/W					*/
+typedef unsigned short	ushort;								/* For Legacy S/W					*/
+typedef unsigned int	uint;								/* For Legacy S/W					*/
+typedef unsigned long	ulong;								/* For Legacy S/W					*/
+
+typedef unsigned char	uint8_t;							/* For RPDL							*/	/** SET **/
+typedef unsigned short	uint16_t;							/* For RPDL							*/	/** SET **/
+typedef unsigned long	uint32_t;							/* For RPDL							*/	/** SET **/
+
+typedef signed char		int8_t;								/* For RPDL							*/	/** SET **/
+typedef signed short	int16_t;							/* For RPDL							*/	/** SET **/
+typedef signed long		int32_t;							/* For RPDL							*/	/** SET **/
+
+
+typedef signed long	error_t;								/* For RISC MCU						*/	/** SET **/
+/* typedef signed short	error_t;	*/						/* For CISC MCU						*/	/** SET **/
+
+
+typedef unsigned short	size_t16;
+
+
+#ifndef NULL
+#define NULL	0
+#endif
+
+
+
+
+/*----------------------------------------------------------------------------------------------*
+	Macros
+ *----------------------------------------------------------------------------------------------*/
+#define ARRAYSIZE(n)	(sizeof(n)/sizeof(*n))
+
+#define mtl_waisem(id)							( mtl_waisem2((short )(id))														)
+#define mtl_sigsem(id)							( mtl_sigsem2((short )(id))														)
+#define mtl_dlytsk(tim)							( mtl_dlytsk2((int )(tim))														)
+#define mtl_statsk(id, stacd)					( mtl_statsk2((short )(id), (int )(stacd))										)
+#define mtl_setflg(id, ptn)						( mtl_setflg2((short )(id), (uint )(ptn))										)
+#define mtl_clrflg(id, ptn)						( mtl_clrflg2((short )(id), (uint )(ptn))										)
+#define mtl_waiflg(p_ptn, flg, ptn, mode)		( mtl_waiflg2((uint FAR* )(p_ptn), (short )(id), (uint )(ptn), (uint )(mode))	)
+#define mtl_polflg(p_ptn, flg, ptn, mode)		( mtl_polflg2((uint FAR* )(p_ptn), (short )(id), (uint )(ptn), (uint )(mode))	)
+
+#define mtl_memcmp(s1, s2, n)					( mtl_memcmp2((void FAR* )(s1), (void FAR* )(s2), (size_t16 )(n))				)
+#define mtl_memmove(s1, s2, n)					( mtl_memmove2((void FAR* )(s1), (void FAR* )(s2), (size_t16 )(n))				)
+#define mtl_memcpy(s1, s2, n)					( mtl_memcpy2((void FAR* )(s1), (void FAR* )(s2), (size_t16 )(n))				)
+#define mtl_memcpy_w(s1, s2, n)					( mtl_memcpy_w2((void FAR* )(s1), (void FAR* )(s2), (size_t16 )(n))				)
+#define mtl_memset(s, c, n)						( mtl_memset2((void FAR* )(s), (int )(c), (size_t16 )(n))						)
+#define mtl_strcat(s1, s2)						( mtl_strcat2((char FAR* )(s1), (char FAR* )(s2))								)
+#define mtl_strcmp(s1, s2)						( mtl_strcmp2((char FAR* )(s1), (char FAR* )(s2))								)
+#define mtl_strcpy(s1, s2)						( mtl_strcpy2((char FAR* )(s1), (char FAR* )(s2))								)
+#define mtl_strlen(s)							( mtl_strlen2((char FAR* )(s))													)
+
+#define mtl_ShortPeek(adr)						( mtl_ShortPeek2((void FAR* )(adr))												)
+#define mtl_LongPeek(adr)						( mtl_LongPeek2((void FAR* )(adr))												)
+#define mtl_ShortPoke(adr, dat)					( mtl_ShortPoke2((void FAR* )(adr), (ushort )(dat))								)
+#define mtl_LongPoke(adr, dat)					( mtl_LongPoke2((void FAR* )(adr), (ulong )(dat))								)
+
+#define mtl_wait_lp(time)						( mtl_wait_lp2((uint )(time))													)
+
+
+
+
+/*----------------------------------------------------------------------------------------------*
+	Prototypes
+ *----------------------------------------------------------------------------------------------*/
+/* Replace each system call functions.															*/
+int mtl_waisem2(short semid);
+int mtl_sigsem2(short semid);
+int mtl_dlytsk2(int dlytim);
+int mtl_statsk2(short tskid, int stacd);
+int mtl_setflg2(short flgid, uint setptn);
+int mtl_clrflg2(short flgid, uint clrptn);
+int mtl_waiflg2(uint FAR* p_flgptn, short flgid, uint waiptn, uint wfmode);
+int mtl_polflg2(uint FAR* p_flgptn, short flgid, uint waiptn, uint wfmode);
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* Replace standard functions.																	*/
+int mtl_memcmp2(void FAR* s1, void FAR* s2, size_t16 n);
+void FAR* mtl_memmove2(void FAR* s1, void FAR* s2, size_t16 n);
+void FAR* mtl_memcpy2(void FAR* s1, void FAR* s2, size_t16 n);
+void FAR* mtl_memcpy_w2(void FAR* s1, void FAR* s2, size_t16 n);/* memcpy2() for word unit		*/
+void FAR* mtl_memset2(void FAR* s, int c, size_t16 n);
+char FAR* mtl_strcat2(char FAR* s1, char FAR* s2);
+int mtl_strcmp2(char FAR* s1, char FAR* s2);
+char FAR* mtl_strcpy2(char FAR* s1, char FAR* s2);
+size_t16 mtl_strlen2(char FAR* s);
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* Routine for each system.																		*/
+ushort mtl_ShortPeek2(void FAR* adr);
+ulong mtl_LongPeek2(void FAR* adr);
+void mtl_ShortPoke2(void FAR* adr, ushort dat);
+void mtl_LongPoke2(void FAR* adr, ulong dat);
+
+
+
+/*----------------------------------------------------------------------------------------------*/
+/* loop timer																					*/
+void mtl_wait_lp2(uint time);
+
+
+
+
+/************************************************************************************************
+ *	Sub-module for debugging
+ ************************************************************************************************/
+/* Definition of LOG buffer size value															*/
+#define MTL_LOG_MAX		8								/* LOG buffer size						*/
+
+#define mtl_Log(FLG, VAL, FID, LINE)	mtl_Log2((((ulong )(FLG))  << (4 + 6 + 13 + 8))	\
+											   | (((ulong )(FID))  << (		   13 + 8))	\
+											   | (((ulong )(LINE)) <<				8)	\
+											   | ( (uchar )(VAL)))
+ulong mtl_Log2(ulong data);
+void mtl_LogClear(void);
