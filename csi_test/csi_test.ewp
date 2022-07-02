@@ -620,7 +620,7 @@
                 </option>
                 <option>
                     <name>OOCOutputFile</name>
-                    <state>CAN_test_mc.srec</state>
+                    <state>csi_test.srec</state>
                 </option>
                 <option>
                     <name>OOCCommandLineProducer</name>
@@ -675,7 +675,7 @@
                 </option>
                 <option>
                     <name>IlinkOutputFile</name>
-                    <state>CAN_test_mc.out</state>
+                    <state>csi_test.out</state>
                 </option>
                 <option>
                     <name>IlinkDebugInfoEnable</name>

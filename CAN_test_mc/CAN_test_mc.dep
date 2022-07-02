@@ -103,7 +103,7 @@
                 </tool>
                 <tool>
                     <name>ILINK</name>
-                    <file> 75 67</file>
+                    <file> 67 75</file>
                 </tool>
             </outputs>
         </file>
@@ -349,7 +349,7 @@
             <inputs>
                 <tool>
                     <name>ILINK</name>
-                    <file> 41 80 70 18 79 9 26 21 28 6 19 30 31 58 76</file>
+                    <file> 41 80 70 18 79 9 26 21 28 6 1 31 2 58 76</file>
                 </tool>
             </inputs>
         </file>
@@ -377,7 +377,7 @@
             <outputs>
                 <tool>
                     <name>ICCRL78</name>
-                    <file> 84</file>
+                    <file> 84 1</file>
                 </tool>
                 <tool>
                     <name>BICOMP</name>
@@ -421,10 +421,6 @@
         <forcedrebuild>
             <name>$PROJ_DIR$\src\Rtk\RtkTasks.c</name>
             <tool>ICCRL78</tool>
-        </forcedrebuild>
-        <forcedrebuild>
-            <name>[MULTI_TOOL]</name>
-            <tool>ILINK</tool>
         </forcedrebuild>
     </configuration>
     <configuration>

@@ -11,7 +11,8 @@
 
 /*---------------------------------------------------------------------------*/
 /* PROTO                                                                     */
-extern void InitScheduler(void);
+void InitScheduler(void);
+void Scheduler(void);
 
 #endif
 
