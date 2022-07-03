@@ -23,7 +23,7 @@
 * Device(s)    : R5F104BG
 * Tool-Chain   : IAR Systems iccrl78
 * Description  : This file implements main function.
-* Creation Date: 7/2/2022
+* Creation Date: 7/3/2022
 ***********************************************************************************************************************/
 
 /***********************************************************************************************************************
@@ -32,6 +32,7 @@ Includes
 #include "r_cg_macrodriver.h"
 #include "r_cg_cgc.h"
 #include "r_cg_port.h"
+#include "r_cg_intc.h"
 #include "r_cg_serial.h"
 #include "r_cg_it.h"
 /* Start user code for include. Do not edit comment generated here */
