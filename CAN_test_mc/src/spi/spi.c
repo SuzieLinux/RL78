@@ -131,7 +131,7 @@ int16_t SPI_Send_Receive(uint16_t ByteCount)
 
         TxBuf = spiTransmitBuffer[i];
 
-        SIO00 = TxBuf;
+        SIO20 = TxBuf;
 
         /* Transmit&receive completion check */
         TRxWait = SPI_RX_WAIT;
@@ -148,7 +148,7 @@ int16_t SPI_Send_Receive(uint16_t ByteCount)
         }
 
         /* Stores the received data from SDR to pData buffer. */
-        RxBuf = SIO00;        /* Receive data */
+        RxBuf = SIO20;        /* Receive data */
         spiReceiveBuffer[i] = RxBuf;
     }
 
