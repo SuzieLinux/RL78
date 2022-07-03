@@ -135,7 +135,7 @@
 			<F N="src/Base/main.c"/>
 			<F N="src/can/pcan.c"/>
 			<F N="src/Base/r_cg_cgc.c"/>
-			<F N="src/Base/r_cg_cgc_user.c"/>
+			<F N="src/Base/r_cg_intc.c"/>
 			<F N="src/tasks/r_cg_it.c"/>
 			<F N="src/Base/r_cg_port.c"/>
 			<F N="src/Base/r_systeminit.c"/>
@@ -151,6 +151,7 @@
 			<F N="src/Base/main.h"/>
 			<F N="src/can/pcan.h"/>
 			<F N="src/Base/r_cg_cgc.h"/>
+			<F N="src/Base/r_cg_intc.h"/>
 			<F N="src/tasks/r_cg_it.h"/>
 			<F N="src/Base/r_cg_port.h"/>
 			<F N="src/spi/r_cg_serial.h"/>

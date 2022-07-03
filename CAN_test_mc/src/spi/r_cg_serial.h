@@ -23,7 +23,7 @@
 * Device(s)    : R5F104BG
 * Tool-Chain   : IAR Systems iccrl78
 * Description  : This file implements device driver for Serial module.
-* Creation Date: 6/27/2022
+* Creation Date: 7/3/2022
 ***********************************************************************************************************************/
 
 #ifndef SERIAL_H
@@ -75,10 +75,10 @@ Macro definitions (Register bit)
 */
 #define _0020_SAU_SMRMN_INITIALVALUE     (0x0020U)
 /* Selection of macro clock (MCK) of channel n (CKSmn) */
-#define _0000_SAU_CLOCK_SELECT_CK00      (0x0000U)    /* operation clock CK0 set by PRS register */
+#define _0000_SAU_CLOCK_SELECT_CK00      (0x0000U)    /* operation clock CK0 set by PRS register */ 
 #define _8000_SAU_CLOCK_SELECT_CK01      (0x8000U)    /* operation clock CK1 set by PRS register */
 /* Selection of transfer clock (TCLK) of channel n (CCSmn) */
-#define _0000_SAU_CLOCK_MODE_CKS         (0x0000U)    /* divided operation clock MCK specified by CKSmn bit */
+#define _0000_SAU_CLOCK_MODE_CKS         (0x0000U)    /* divided operation clock MCK specified by CKSmn bit */  
 #define _4000_SAU_CLOCK_MODE_TI0N        (0x4000U)    /* clock input from SCK pin (slave transfer in CSI mode) */
 /* Selection of start trigger source (STSmn) */
 #define _0000_SAU_TRIGGER_SOFTWARE       (0x0000U)    /* only software trigger is valid */
