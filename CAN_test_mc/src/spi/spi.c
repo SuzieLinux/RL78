@@ -127,7 +127,7 @@ int16_t SPI_Send_Receive(uint16_t ByteCount)
     for (i = 0; i < ByteCount; i++)            /* Loop for tx byte  */
     {
         /* Clear IR bit of IR register */
-        SIO_RXNEXT = SIO_FALSE;
+        CSIIF20 = SIO_FALSE;
 
         TxBuf = spiTransmitBuffer[i];
 
@@ -136,7 +136,7 @@ int16_t SPI_Send_Receive(uint16_t ByteCount)
         /* Transmit&receive completion check */
         TRxWait = SPI_RX_WAIT;
 
-        while (SIO_RXNEXT == SIO_FALSE)   /* Loop for receive completion */
+        while (CSIIF20 == SIO_FALSE)   /* Loop for receive completion */
         {
             TRxWait--;
             if (TRxWait == 0)           /* Transmit&receive waiting time over */
